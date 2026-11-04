@@ -1,0 +1,87 @@
+# ==============================================================================
+# ALPR & Computer Vision Project - .gitignore
+# ==============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# C Distribution / Packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Video files (ignora gravações pesadas de dashcam)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.m4v
+*.flv
+data/videos_entrada/*
+!data/videos_entrada/.gitkeep
+data/videos_processados/*
+!data/videos_processados/.gitkeep
+
+# Imagens de saída e evidências geradas em tempo de execução
+data/fotos/*
+!data/fotos/.gitkeep
+
+# Planilhas geradas e logs de execução
+data/*.xlsx
+*.xlsx
+data/*.log
+*.log
+
+# Treinamentos YOLO / Ultralytics e Datasets
+runs/
+datasets/
+wandb/
+
+# Pesos grandes baixados automaticamente (Ultralytics baixa automaticamente se ausente)
+yolov8n.pt
+*.weights
+
+# Modelos locais pesados opcionais (descomente se desejar manter fora do Git)
+# models/*.onnx
+# models/*.pt
+# !models/.gitkeep
+
+# Configurações de IDEs e Editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.project
+.pydevproject
+
+# Arquivos do Sistema Operacional
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
