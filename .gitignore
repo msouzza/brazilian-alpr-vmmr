@@ -60,10 +60,11 @@ data/*.log
 # Treinamentos YOLO / Ultralytics e Datasets
 runs/
 datasets/
+dataset_*/
 wandb/
 
 # Pesos grandes baixados automaticamente (Ultralytics baixa automaticamente se ausente)
-yolov8n.pt
+yolov8*.pt
 *.weights
 
 # Modelos locais pesados opcionais (descomente se desejar manter fora do Git)

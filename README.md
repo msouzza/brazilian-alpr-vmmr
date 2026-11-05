@@ -113,7 +113,8 @@ flowchart TD
 alpr_project/
 ├── config.py                  # Parâmetros gerais (limiares, caminhos, GPU/CPU, resoluções)
 ├── main.py                    # Script principal de execução em lote
-├── train_plate_model.py       # Script de fine-tuning do YOLOv8 com Roboflow Universe
+├── train_plate_model.py       # Script de fine-tuning do YOLOv8 para placas veiculares
+├── train_vmmr_model.py        # Script de treinamento YOLOv8-cls para Marca/Modelo (BRCars)
 ├── requirements.txt           # Dependências do projeto
 ├── LICENSE                    # Licença MIT
 ├── README.md                  # Documentação do projeto
@@ -220,6 +221,22 @@ Caso queira treinar novamente ou atualizar o modelo usando o dataset aberto [Rob
    python train_plate_model.py
    ```
 O script baixará o dataset, treinará a rede por 60 épocas e moverá o melhor peso (`best.pt`) automaticamente para `models/placa_yolov8n.pt`.
+
+---
+
+### 5. Modelo de Marca e Modelo de Veículos (VMMR - BRCars / Modelos Nacionais)
+
+O projeto inclui suporte a classificação com **YOLOv8-cls** especializado na frota brasileira (ex: *Volkswagen Fox, Gol, Polo; Chevrolet Onix; Fiat Palio, Uno; Hyundai HB20*, etc.):
+
+1. Configure sua chave do Roboflow (ou organize imagens locais na pasta `dataset_vmmr/`):
+   ```powershell
+   $env:ROBOFLOW_API_KEY="sua_chave_aqui"
+   ```
+2. Execute o treinamento automatizado:
+   ```bash
+   python train_vmmr_model.py
+   ```
+O script treinará o modelo `yolov8n-cls` e salvará os pesos em `models/car_yolov8_cls.pt` (e exportará para `models/car_model.onnx`). O `main.py` utilizará esses pesos automaticamente para identificar a marca e o modelo exatos. Na ausência de pesos customizados, o sistema utiliza o classificador calibrado de silhueta brasileira categorizando veículos compactos de teto alto (como o VW Fox) corretamente como **Hatchback**.
 
 ---
 

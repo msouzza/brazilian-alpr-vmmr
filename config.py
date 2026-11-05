@@ -54,5 +54,6 @@ DEDUP_WINDOW_SECONDS = 60
 
 # ---------- Classificação de Marca e Modelo (Fase 2) ----------
 CAR_CLASSIFIER_ENABLED = True
-CAR_MODEL_WEIGHTS_PATH = os.path.join(BASE_DIR, "models", "car_model.onnx")
+# Caminho dos pesos do classificador VMMR (aceita YOLO .pt ou .onnx treinado)
+CAR_MODEL_WEIGHTS_PATH = os.path.join(BASE_DIR, "models", "car_yolov8_cls.pt")
 CAR_CLASSIFIER_MIN_CONF = 0.30
