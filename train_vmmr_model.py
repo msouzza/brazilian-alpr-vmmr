@@ -204,13 +204,110 @@ def verificar_e_preparar_brcars() -> bool:
     return total > 0
 
 
+def verificar_e_preparar_vehicle_rear() -> bool:
+    """
+    Verifica se o usuário descompactou o dataset Vehicle-Rear (UTFPR/UFPR)
+    em 'vehicle-rear', 'Vehicle-Rear' ou 'dataset_vehicle_rear'.
+    Lê os arquivos de anotação (.xml ou .txt) com make/model e organiza os recortes
+    na pasta 'dataset_vmmr/train/' e 'dataset_vmmr/val/'.
+    """
+    import re
+    import xml.etree.ElementTree as ET
+
+    candidatos_pastas = ["vehicle-rear", "Vehicle-Rear", "dataset_vehicle_rear"]
+    pasta_vr = None
+    for cand in candidatos_pastas:
+        if os.path.exists(cand):
+            pasta_vr = cand
+            break
+
+    if pasta_vr is None:
+        return False
+
+    print(f"\n[Treino VMMR] Base Vehicle-Rear detectada em '{pasta_vr}'!")
+    print("[Treino VMMR] Extraindo recortes e rótulos de Marca/Modelo...")
+
+    total = 0
+    for root_dir, _, files in os.walk(pasta_vr):
+        for fname in files:
+            if not fname.lower().endswith((".jpg", ".jpeg", ".png")):
+                continue
+
+            img_path = os.path.join(root_dir, fname)
+            base = os.path.splitext(img_path)[0]
+            txt_path = base + ".txt"
+            xml_path = base + ".xml"
+
+            make, model, bbox = None, None, None
+
+            # 1. Tenta ler anotação .txt (formato UFPR/UTFPR: make: ..., model: ...)
+            if os.path.exists(txt_path):
+                try:
+                    with open(txt_path, "r", encoding="utf-8", errors="ignore") as f:
+                        conteudo = f.read()
+                    m_make = re.search(r"(?:make|manufacturer|marca)\s*:\s*([^\r\n]+)", conteudo, re.I)
+                    m_model = re.search(r"(?:model|modelo)\s*:\s*([^\r\n]+)", conteudo, re.I)
+                    m_pos = re.search(r"(?:position_vehicle|vehicle|corners)\s*:\s*(\d+)\s+(\d+)\s+(\d+)\s+(\d+)", conteudo, re.I)
+                    if m_make:
+                        make = m_make.group(1).strip()
+                    if m_model:
+                        model = m_model.group(1).strip()
+                    if m_pos:
+                        bbox = tuple(map(int, m_pos.groups()))
+                except Exception:
+                    pass
+
+            # 2. Tenta ler anotação .xml
+            elif os.path.exists(xml_path):
+                try:
+                    tree = ET.parse(xml_path)
+                    root_xml = tree.getroot()
+                    for elem in root_xml.iter():
+                        tag = elem.tag.lower()
+                        if tag in ("make", "manufacturer", "marca") and elem.text:
+                            make = elem.text.strip()
+                        elif tag in ("model", "modelo") and elem.text:
+                            model = elem.text.strip()
+                except Exception:
+                    pass
+
+            if not make or not model or make.lower() in ("unknown", "none", "-") or model.lower() in ("unknown", "none", "-"):
+                continue
+
+            classe = f"{make}_{model}".lower().replace(" ", "_").replace("-", "_")
+            split_dir = "val" if (total % 7 == 0) else "train"
+            pasta_destino = os.path.join(DATASET_DIR, split_dir, classe)
+            os.makedirs(pasta_destino, exist_ok=True)
+            caminho_destino = os.path.join(pasta_destino, f"vr_{total}_{fname}")
+
+            if bbox is not None:
+                img = cv2.imread(img_path)
+                if img is None:
+                    continue
+                ih, iw = img.shape[:2]
+                x, y, bw, bh = bbox
+                x1, y1 = max(0, x), max(0, y)
+                x2, y2 = min(iw, x + bw), min(ih, y + bh)
+                if (x2 - x1) > 30 and (y2 - y1) > 30:
+                    cv2.imwrite(caminho_destino, img[y1:y2, x1:x2])
+                    total += 1
+            else:
+                shutil.copy(img_path, caminho_destino)
+                total += 1
+
+    print(f"[Treino VMMR] Vehicle-Rear estruturado! {total} amostras organizadas em '{DATASET_DIR}/'.")
+    return total > 0
+
+
 def preparar_dataset():
     """
-    1. Verifica se o BRCars foi descompactado localmente (brcars196/ ou dataset_brcars/).
+    1. Verifica se o Vehicle-Rear ou BRCars foi descompactado localmente.
     2. Se já existe 'dataset_vmmr/train', reutiliza diretamente.
     3. Fallback: Baixa do Roboflow Universe no formato 'yolov8'.
     """
-    # 1. Prioridade máxima: BRCars descompactado pelo usuário
+    if verificar_e_preparar_vehicle_rear():
+        return DATASET_DIR
+
     if verificar_e_preparar_brcars():
         return DATASET_DIR
 

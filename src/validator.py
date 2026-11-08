@@ -1,20 +1,7 @@
 """
 Valida se um texto lido pelo OCR corresponde a um formato de placa brasileira
-(antiga ou Mercosul). Também faz limpeza básica do texto antes de validar.
-"""
-
-import re
-import sys
-import os
-
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-import config
-
-
-"""
-Valida se um texto lido pelo OCR corresponde a um formato de placa brasileira
-(antiga ou Mercosul). Aplica limpeza e correção sintática inteligente baseada
-nas regras posicionais das placas brasileiras.
+(antiga ou Mercosul). Aplica limpeza, correção sintática inteligente e desempate
+posicional de caracteres baseado no padrão Mercosul e histórico de confusões de OCR.
 """
 
 import re
@@ -36,6 +23,20 @@ DIGITO_PARA_LETRA = {
     "8": "B",
 }
 
+# No padrão Mercosul (LLLNLNN), o 5º caractere (índice 4) é obrigatoriamente letra.
+# A confusão clássica mais comum é '0' lido no lugar de 'D' (fonte de placa e ruído de resolução)
+# e '8' lido no lugar de 'B'.
+DIGITO_PARA_LETRA_POS4 = {
+    "0": "D",  # Prioridade absoluta para Mercosul: '0' -> 'D'
+    "8": "B",  # '8' -> 'B'
+    "1": "I",
+    "2": "Z",
+    "4": "A",
+    "5": "S",
+    "6": "G",
+    "7": "T",
+}
+
 LETRA_PARA_DIGITO = {
     "O": "0",
     "D": "0",
@@ -51,6 +52,26 @@ LETRA_PARA_DIGITO = {
     "B": "8",
     "g": "9",
     "q": "9",
+}
+
+# Preferências em caso de empate entre caracteres em posições de letra
+# (char_preferido, char_desfavorecido)
+PREFERENCIAS_DESEMPATE_LETRAS = {
+    ("L", "Z"),  # Em placas veiculares, 'L' frequentemente tem a base confundida com 'Z' pelo OCR
+    ("D", "0"),  # 'D' frequentemente vira '0' no 5º caractere
+    ("B", "8"),  # 'B' frequentemente vira '8'
+    ("I", "1"),
+    ("O", "0"),
+}
+
+# Preferências em caso de empate entre caracteres em posições de dígito
+PREFERENCIAS_DESEMPATE_DIGITOS = {
+    ("0", "O"),
+    ("0", "D"),
+    ("8", "B"),
+    ("1", "I"),
+    ("1", "L"),
+    ("2", "Z"),
 }
 
 
@@ -100,9 +121,9 @@ def _avaliar_candidato_mercosul(cand: str) -> tuple[str | None, int]:
     elif not chars[3].isdigit():
         return None, 999
 
-    # Índice 4 deve ser letra
+    # Índice 4 deve ser letra (usa DIGITO_PARA_LETRA_POS4 onde '0' -> 'D' e '8' -> 'B')
     if chars[4].isdigit():
-        subst = DIGITO_PARA_LETRA.get(chars[4])
+        subst = DIGITO_PARA_LETRA_POS4.get(chars[4])
         if subst:
             chars[4] = subst
             alteracoes += 1
@@ -174,7 +195,8 @@ def validar_placa(texto: str) -> str | None:
     """
     Retorna a placa formatada se for válida (direta ou corrigida sintaticamente),
     ou None se não bater com nenhum dos dois formatos (antigo ou Mercosul).
-    Usa princípio de mínima alteração para desambiguação.
+    Usa princípio de mínima alteração para desambiguação, priorizando o padrão
+    Mercosul em casos de dúvida ou confusão clássica no 5º caractere ('0' -> 'D', '8' -> 'B').
     """
     texto_limpo = limpar_texto(texto)
     if not texto_limpo or len(texto_limpo) < 7:
@@ -182,9 +204,21 @@ def validar_placa(texto: str) -> str | None:
 
     # 1. Teste direto exato se tamanho for 7
     if len(texto_limpo) == 7:
+        # Se for diretamente Mercosul válido (LLLNLNN), aceita imediatamente
         if re.match(config.REGEX_PLACA_MERCOSUL, texto_limpo):
             return texto_limpo
+
+        # Se casar com placa antiga (LLLNNNN), verifica ambiguidade no 5º caractere (índice 4):
+        # Se o 5º caractere for '0' (confusão com 'D') ou '8' (confusão com 'B'), prioriza Mercosul!
         if re.match(config.REGEX_PLACA_ANTIGA, texto_limpo):
+            if texto_limpo[4] == "0":
+                cand_mercosul = texto_limpo[:4] + "D" + texto_limpo[5:]
+                if re.match(config.REGEX_PLACA_MERCOSUL, cand_mercosul):
+                    return cand_mercosul
+            elif texto_limpo[4] == "8":
+                cand_mercosul = texto_limpo[:4] + "B" + texto_limpo[5:]
+                if re.match(config.REGEX_PLACA_MERCOSUL, cand_mercosul):
+                    return cand_mercosul
             return texto_limpo
 
     # 2. Gera janelas de 7 caracteres se houver prefixos/sufixos ou ruídos de borda
@@ -197,28 +231,114 @@ def validar_placa(texto: str) -> str | None:
     menor_custo = 999
 
     for cand in candidatos:
-        # Se for diretamente válida na janela, custo é 0
-        if re.match(config.REGEX_PLACA_MERCOSUL, cand) or re.match(config.REGEX_PLACA_ANTIGA, cand):
+        # Se for diretamente válida Mercosul na janela, prioridade máxima
+        if re.match(config.REGEX_PLACA_MERCOSUL, cand):
+            return cand
+
+        # Se for diretamente válida Antiga, verifica se pode ser Mercosul com '0' -> 'D' ou '8' -> 'B'
+        if re.match(config.REGEX_PLACA_ANTIGA, cand):
+            if cand[4] == "0":
+                return cand[:4] + "D" + cand[5:]
+            if cand[4] == "8":
+                return cand[:4] + "B" + cand[5:]
             return cand
 
         # Avalia correções possíveis
         placa_m, custo_m = _avaliar_candidato_mercosul(cand)
         placa_a, custo_a = _avaliar_candidato_antiga(cand)
 
-        # Escolhe a de menor custo
-        if placa_m and custo_m < menor_custo:
-            menor_custo = custo_m
-            melhor_placa = placa_m
+        # Desempate com prioridade Mercosul:
+        # Se ambos os padrões forem possíveis:
+        # - Se custo_m <= custo_a: escolhe Mercosul
+        # - Se custo_m == custo_a + 1 e a diferença for a substituição de '0' por 'D' no 5º caractere: prioriza Mercosul!
+        cand_venc = None
+        custo_venc = 999
 
-        if placa_a and custo_a < menor_custo:
-            menor_custo = custo_a
-            melhor_placa = placa_a
+        if placa_m and placa_a:
+            if custo_m <= custo_a:
+                cand_venc = placa_m
+                custo_venc = custo_m
+            elif custo_m == custo_a + 1 and cand[4] in ("0", "8"):
+                cand_venc = placa_m
+                custo_venc = custo_a
+            else:
+                cand_venc = placa_a
+                custo_venc = custo_a
+        elif placa_m:
+            cand_venc = placa_m
+            custo_venc = custo_m
+        elif placa_a:
+            cand_venc = placa_a
+            custo_venc = custo_a
+
+        if cand_venc and custo_venc < menor_custo:
+            menor_custo = custo_venc
+            melhor_placa = cand_venc
 
     # Aceita se exigiu no máximo 2 correções de confusão de OCR
     if melhor_placa and menor_custo <= 2:
         return melhor_placa
 
     return None
+
+
+def desempatar_caracteres(char1: str, char2: str, posicao: int) -> str:
+    """
+    Desempata dois caracteres concorrentes na mesma posição baseado nas regras
+    sintáticas da placa brasileira e histórico de confusões de OCR (ex: Z vs L, 0 vs D, 8 vs B).
+    """
+    if char1 == char2:
+        return char1
+
+    c1, c2 = char1.upper(), char2.upper()
+
+    # Posições 0, 1, 2 e 4 (quando Mercosul) esperam LETRAS
+    eh_posicao_letra = (posicao in (0, 1, 2, 4))
+    if eh_posicao_letra:
+        if (c1, c2) in PREFERENCIAS_DESEMPATE_LETRAS:
+            return c1
+        if (c2, c1) in PREFERENCIAS_DESEMPATE_LETRAS:
+            return c2
+        # Se um for letra e outro for dígito, prefere letra
+        if c1.isalpha() and c2.isdigit():
+            return c1
+        if c2.isalpha() and c1.isdigit():
+            return c2
+    else:
+        # Posições 3, 5, 6 esperam DÍGITOS
+        if (c1, c2) in PREFERENCIAS_DESEMPATE_DIGITOS:
+            return c1
+        if (c2, c1) in PREFERENCIAS_DESEMPATE_DIGITOS:
+            return c2
+        if c1.isdigit() and c2.isalpha():
+            return c1
+        if c2.isdigit() and c1.isalpha():
+            return c2
+
+    return char1
+
+
+def desempatar_placas(placa1: str, placa2: str) -> str:
+    """
+    Reconcilia e desempata duas placas concorrentes posição a posição,
+    resolvendo ambiguidades clássicas (Z vs L, 0 vs D, 8 vs B).
+    """
+    if not placa1:
+        return placa2 or ""
+    if not placa2:
+        return placa1
+
+    if len(placa1) != 7 or len(placa2) != 7:
+        return placa1
+
+    chars_res = []
+    for pos, (c1, c2) in enumerate(zip(placa1, placa2)):
+        c_venc = desempatar_caracteres(c1, c2, pos)
+        chars_res.append(c_venc)
+
+    res = "".join(chars_res)
+    val = validar_placa(res)
+    return val if val else res
 
 
 def obter_placa_ou_mascara(texto: str | None) -> str:

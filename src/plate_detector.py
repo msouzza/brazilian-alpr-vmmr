@@ -66,11 +66,32 @@ class Detector:
         p_cx = (px1 + px2) / 2
         p_cy = (py1 + py2) / 2
 
-        # 1. Busca veículo que contém o centro da placa
+        # 1. Busca veículos que contêm o centro da placa ou sobrepõem significativamente
+        candidatos = []
         for v in veiculos:
             vx1, vy1, vx2, vy2 = v["bbox"]
-            if vx1 <= p_cx <= vx2 and vy1 <= p_cy <= vy2:
-                return v
+            vcx = (vx1 + vx2) / 2.0
+            vcy = (vy1 + vy2) / 2.0
+            vw = max(1, vx2 - vx1)
+            vh = max(1, vy2 - vy1)
+            varea = vw * vh
+            dist = ((p_cx - vcx) ** 2 + (p_cy - vcy) ** 2) ** 0.5
+
+            contem_centro = (vx1 <= p_cx <= vx2 and vy1 <= p_cy <= vy2)
+            dist_esq = p_cx - vx1
+            dist_dir = vx2 - p_cx
+            margem_borda_x = min(dist_esq, dist_dir)
+            rel_borda_x = margem_borda_x / vw
+
+            if contem_centro:
+                custo = dist * (1.0 + (varea / 35000.0)) - (rel_borda_x * 50.0)
+                if rel_borda_x < 0.12:
+                    custo += 60.0
+                candidatos.append((custo, v))
+
+        if candidatos:
+            candidatos.sort(key=lambda x: x[0])
+            return candidatos[0][1]
 
         # 2. Fallback: expande a região da placa para capturar a lataria ao redor
         h_frame, w_frame = shape_frame[:2]

@@ -41,6 +41,8 @@ def salvar_foto_veiculo(frame, placa: str, dt: datetime, bbox: tuple | None = No
             rotulo_veiculo = f"{tipo} {cor}"
             if marca_mod != "-":
                 rotulo_veiculo += f" ({marca_mod})"
+            if placa in ("SEM_PLACA", "NÃO IDENTIFICADA", "SEM PLACA"):
+                rotulo_veiculo += " [SEM PLACA]"
 
             tam_v = cv2.getTextSize(rotulo_veiculo, cv2.FONT_HERSHEY_SIMPLEX, 0.8, 2)[0]
             v_ly1 = max(0, vy1 - tam_v[1] - 8)
@@ -76,8 +78,16 @@ def salvar_foto_veiculo(frame, placa: str, dt: datetime, bbox: tuple | None = No
 
     timestamp_str = dt.strftime("%Y-%m-%d_%H-%M-%S")
     placa_sanitizada = sanitizar_nome_arquivo(placa)
-    nome_arquivo = f"{placa_sanitizada}_{timestamp_str}.jpg"
+    nome_base = f"{placa_sanitizada}_{timestamp_str}"
+    nome_arquivo = f"{nome_base}.jpg"
     caminho_completo = os.path.join(config.FOTOS_DIR, nome_arquivo)
+
+    # Evita sobrescrever fotos caso haja mais de um veículo no mesmo segundo
+    contador = 1
+    while os.path.exists(caminho_completo):
+        nome_arquivo = f"{nome_base}_{contador}.jpg"
+        caminho_completo = os.path.join(config.FOTOS_DIR, nome_arquivo)
+        contador += 1
 
     cv2.imwrite(caminho_completo, foto)
 

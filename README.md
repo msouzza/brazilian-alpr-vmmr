@@ -53,6 +53,16 @@ Um mesmo veículo costuma aparecer em múltiplos quadros sucessivos. O motor de 
 * **Estimativa de Cor da Lataria**: Análise no espaço de cores **HSV**, isolando uma região geométrica da lataria do veículo e eliminando reflexos de faróis/sol ($V > 240$), vidros e sombras de asfalto ($V < 30$), categorizando entre cores acromáticas (Preto, Branco, Prata/Cinza) e cromáticas (Vermelho, Azul, Amarelo/Laranja, Verde, Roxo/Vinho).
 * **Inferência de Categoria / Carroceria**: Rede MobileNetV3 integrada que avalia a silhueta e proporções do veículo para classificar entre *Hatchback*, *Sedan*, *SUV / Utilitário*, *Picape* e *Minivan / Monovolume* (com suporte a modelos ONNX treinados no dataset BRCars).
 
+### 7. 🛰️ Modo Varredura Total Forense (Total Scan / Forensic Vehicle Search)
+Permite a catalogação e o registro investigativo de **TODOS** os veículos que aparecem na cena (em movimento ou parados/estacionados na rua ou acostamento), inclusive quando a placa estiver ausente, oculta, inacessível pelo ângulo ou ilegível:
+* **Modos de Operação no `config.py`**:
+  * `"total_scan"` (padrão): Rastreamento contínuo de todos os veículos presentes na cena.
+  * `"plate_only"`: Modo clássico retrocompatível, restrito apenas a veículos com placas legíveis.
+* **Rastreador Temporal IoU**: Acompanha cada veículo ao longo dos frames da câmera, consolida a melhor resolução visual (frame 4K) e associa todas as leituras de placa que surgirem durante sua passagem.
+* **Filtros Anti-Ruído e Anti-Horizonte**: Descarte inteligente de falsos positivos momentâneos (`MIN_VEHICLE_FRAMES = 3`), ruídos distantes no horizonte (`MIN_VEHICLE_WIDTH = 80`, `MIN_VEHICLE_HEIGHT = 80`), supressão de caixas redundantes/contidas e eliminação do capô da câmera do veículo.
+* **Eficiência SigLIP VMMR Única**: O modelo SigLIP é invocado estritamente **uma única vez por veículo** no seu recorte de maior resolução e proximidade, preservando o FPS do pipeline.
+* **Registro Forense**: Veículos sem placa legível recebem a classificação `"SEM_PLACA"` na planilha Excel e têm Tipo, Cor da Lataria, Marca/Modelo, Top-3 Descobertas, Confiabilidade VMMR e Foto 4K anotada salvos com precisão.
+
 ---
 
 ## 🏗️ Arquitetura do Sistema
@@ -114,19 +124,22 @@ alpr_project/
 ├── config.py                  # Parâmetros gerais (limiares, caminhos, GPU/CPU, resoluções)
 ├── main.py                    # Script principal de execução em lote
 ├── train_plate_model.py       # Script de fine-tuning do YOLOv8 para placas veiculares
-├── train_vmmr_model.py        # Script de treinamento YOLOv8-cls para Marca/Modelo (BRCars)
+├── train_vmmr_model.py        # Script de treinamento YOLOv8-cls para Marca/Modelo (Vehicle-Rear / BRCars)
 ├── requirements.txt           # Dependências do projeto
 ├── LICENSE                    # Licença MIT
 ├── README.md                  # Documentação do projeto
+├── docs/                      # Guias técnicos especializados
+│   └── VMMR_BRAZIL_GUIDE.md   # Guia detalhado de VMMR no Brasil
 ├── models/                    # Pesos de redes neurais
-│   ├── placa_yolov8n.pt       # Modelo especializado em placas veiculares
-│   └── car_model.onnx         # (Opcional) Classificador customizado BRCars
+│   ├── placa_yolov8n.pt       # Modelo especializado em placas veiculares (~6 MB)
+│   └── car_yolov8_cls.pt      # (Opcional) Classificador único VMMR (~3 MB)
 ├── src/                       # Módulos do pipeline
 │   ├── plate_detector.py      # Módulo YOLOv8 para detecção de placas e veículos
 │   ├── ocr_reader.py          # Leitor OCR (FastPlateOCR, EasyOCR, PaddleOCR)
 │   ├── validator.py           # Gramática veicular, matriz de confusão e máscara '?'
-│   ├── vehicle_classifier.py  # Análise de cor HSV e classificação de carroceria
-│   ├── video_processor.py     # Gerenciamento de frames, best-frame e votação temporal
+│   ├── vehicle_classifier.py  # Análise de cor HSV e classificação de carroceria / VMMR SigLIP
+│   ├── vehicle_tracker.py     # Rastreador IoU temporal para Varredura Total Forense
+│   ├── video_processor.py     # Gerenciamento de frames, rastreamento e consolidação de veículos
 │   ├── vehicle_saver.py       # Renderização de bounding boxes e salvamento de imagens
 │   ├── spreadsheet_writer.py  # Gravação segura da planilha Excel (com fallback de lock)
 │   ├── deduplicator.py        # Janela temporal de deduplicação
@@ -312,6 +325,22 @@ Contribuições, correções de bugs e novas ideias são muito bem-vindas!
 3. Faça o commit de suas alterações (`git commit -m 'feat: Adiciona suporte a novo modelo de OCR'`)
 4. Envie para o GitHub (`git push origin feature/nova-funcionalidade`)
 5. Abra um Pull Request
+
+---
+
+## 📚 Citações e Referências Acadêmicas
+
+Se você utilizar a base de dados **BRCars** ou este projeto em pesquisas acadêmicas ou projetos técnicos, por favor cite o trabalho original dos pesquisadores:
+
+```bibtex
+@inproceedings{kuhn2021brcars,
+  title={BRCars: a Dataset for Fine-Grained Classification of Car Images},
+  author={Kuhn, Daniel M and Moreira, Viviane P},
+  booktitle={2021 34nd SIBGRAPI Conference on Graphics, Patterns and Images (SIBGRAPI)},
+  year={2021},
+  organization={IEEE}
+}
+```
 
 ---
 

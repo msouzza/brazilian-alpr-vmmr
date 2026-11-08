@@ -6,4 +6,7 @@ easyocr>=1.7.1
 openpyxl>=3.1.2
 torch>=2.2.0
 torchvision>=0.17.0
+transformers>=4.40.0
+pillow>=10.0.0
 roboflow>=1.1.0
+sentencepiece>=0.2.0

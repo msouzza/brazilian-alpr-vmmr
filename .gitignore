@@ -61,11 +61,15 @@ data/*.log
 runs/
 datasets/
 dataset_*/
+brcars*/
+vehicle-rear/
+Vehicle-Rear/
 wandb/
 
-# Pesos grandes baixados automaticamente (Ultralytics baixa automaticamente se ausente)
+# Pesos grandes baixados automaticamente (Ultralytics / SigLIP cache)
 yolov8*.pt
 *.weights
+models/siglip_text_embeddings.pt
 
 # Modelos locais pesados opcionais (descomente se desejar manter fora do Git)
 # models/*.onnx
