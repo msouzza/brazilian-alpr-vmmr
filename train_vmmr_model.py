@@ -31,7 +31,7 @@ import yaml
 from ultralytics import YOLO
 
 # ---------- Configurações de Treinamento ----------
-ROBOFLOW_API_KEY = os.environ.get("ROBOFLOW_API_KEY", "BSqnEpUnz6BLi5Lcswme")
+ROBOFLOW_API_KEY = os.environ.get("ROBOFLOW_API_KEY", "COLE_SUA_API_KEY_AQUI")
 
 RAW_DATASET_DIR = "dataset_raw_yolo"
 DATASET_DIR = "dataset_vmmr"
