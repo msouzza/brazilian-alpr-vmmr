@@ -761,6 +761,972 @@ CATALOGO_FROTA_BR = {
             "a photo of a white Fiat Fiorino small commercial delivery cargo box van in Brazil",
         ],
     },
+    # --- Hatches / Subcompactos adicionados ---
+    "Peugeot 206": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a classic Peugeot 206 subcompact hatchback car with distinctive swept-back almond headlights, hood air vent and Peugeot lion emblem",
+            "front angle of a Peugeot 206 three-door or five-door hatchback car with low rounded nose and wide lower bumper grille",
+            "rear view of a Peugeot 206 compact hatchback car with curved ruby-red corner taillights and rounded tailgate",
+            "rear angle of a Peugeot 206 hatchback showing sloping rear hatch glass and black bumper molding",
+            "a photo of a Peugeot 206 compact European two-box hatchback car in Brazil",
+        ],
+    },
+    "Peugeot 207": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a Brazilian Peugeot 207 hatchback car with large wide smiling black front grille, long sharp headlights and prominent Peugeot lion on the nose",
+            "front angle of a Peugeot 207 compact hatchback showing aggressive wide front air intake and fog lights",
+            "rear view of a Peugeot 207 compact hatchback car with modernized clear-lens red corner taillights and curved tailgate",
+            "rear angle of a Peugeot 207 five-door hatchback car showing compact proportions and rounded rear bumper",
+            "a photo of a Peugeot 207 compact two-box hatchback car on a Brazilian street",
+        ],
+    },
+    "Peugeot 307": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a Peugeot 307 medium hatchback car with steeply raked windshield, large swept headlights and wide lower grille",
+            "front angle of a Peugeot 307 five-door medium hatchback showing long sloping hood and Peugeot lion badge",
+            "rear view of a Peugeot 307 medium hatchback car with tall triangular corner taillights and wide flat tailgate",
+            "rear angle of a Peugeot 307 medium hatchback showing tall upright C-pillars and spacious cabin",
+            "a photo of a Peugeot 307 five-door medium hatchback car in Brazil",
+        ],
+    },
+    "Peugeot 308": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a Peugeot 308 medium hatchback car with sculpted hood, chrome-framed grille, LED headlights and Peugeot lion emblem",
+            "front angle of a modern Peugeot 308 five-door hatchback showing sporty lower bumper and fog lamp bezels",
+            "rear view of a Peugeot 308 medium hatchback car with wide wraparound boomerang or three-claw taillights",
+            "rear angle of a Peugeot 308 medium hatchback showing aerodynamic roof spoiler and sculpted tailgate",
+            "a photo of a Peugeot 308 five-door medium hatchback passenger car on a Brazilian road",
+        ],
+    },
+    "Citroën C4": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a Citroen C4 medium hatchback car with boomerang headlights, double chevron chrome grille bars and curved hood",
+            "front angle of a Citroen C4 five-door or VTR coupe hatchback on a Brazilian street",
+            "rear view of a Citroen C4 hatchback car with curved split rear glass or high boomerang C-pillar taillights",
+            "rear angle of a Citroen C4 medium hatchback showing rounded aerodynamic tail and double chevron emblem",
+            "a photo of a Citroen C4 medium hatchback passenger car in Brazil",
+        ],
+    },
+    "Citroën C3 Aircross": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a Citroen C3 Aircross compact crossover SUV with roof rack rails, black plastic fender cladding, high ground clearance and double chevron grille",
+            "front angle of a Citroen C3 Aircross rugged MPV crossover showing split headlights, silver skid plate and tall windshield",
+            "rear view of a Citroen C3 Aircross crossover SUV with vertical pillar taillights and external spare wheel or upright SUV tailgate",
+            "rear angle of a Citroen C3 Aircross tall crossover car showing prominent roof rails and rugged black bumper cladding",
+            "a photo of a Citroen C3 Aircross compact crossover SUV car on a Brazilian road",
+        ],
+    },
+    "Ford Focus": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a Ford Focus medium hatchback car with trapezoidal or Aston Martin style grille, swept headlights and Ford blue oval",
+            "front angle of a sporty Ford Focus five-door hatchback showing sculpted hood creases and wide stance",
+            "rear view of a Ford Focus medium hatchback car with horizontal wraparound taillights or tall C-pillar lamps and roof spoiler",
+            "rear angle of a Ford Focus five-door hatchback showing dynamic rear quarter lines and Ford badge",
+            "a photo of a Ford Focus medium five-door hatchback car on a Brazilian road",
+        ],
+    },
+    "Chevrolet Astra": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a Chevrolet Astra Opel Astra G medium hatchback car with angular trapezoidal headlights, slim horizontal grille and centered emblem",
+            "front angle of a classic Chevrolet Astra five-door hatchback car showing crisp wedge-shaped front hood and lower air dam",
+            "rear view of a Chevrolet Astra Opel Astra hatchback car with sharp rectangular corner taillights and angled rear hatch window",
+            "rear angle of a Chevrolet Astra medium hatchback showing clean muscular shoulders and compact rear spoiler",
+            "a photo of a Chevrolet Astra Opel Astra five-door medium hatchback car in Brazil",
+        ],
+    },
+    "Chevrolet Kadett": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a classic 1990s Chevrolet Kadett Opel Kadett E two-door hatchback car with sloping aerodynamic nose, rectangular headlights and black or body-colored bumper",
+            "front angle of a vintage 1990s Chevrolet Kadett two-door hatchback car on a Brazilian street",
+            "rear view of a classic Chevrolet Kadett Opel Kadett E hatchback with distinctive black C-pillar louver vents and small rectangular taillights",
+            "rear angle of an older 1990s Chevrolet Kadett two-door wedge hatchback showing covered rear wheel arch skirt and sloping tailgate",
+            "a photo of a classic 1990s Chevrolet Kadett Opel Kadett E hatchback car in Brazil",
+        ],
+    },
+    "Chevrolet Agile": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a Chevrolet Agile tall compact hatchback car with oversized trapezoidal dual-port grille, large angular headlights and gold Chevrolet bowtie",
+            "front angle of a Chevrolet Agile high-roof subcompact hatchback showing tall boxy hood and wide chrome bar across the grille",
+            "rear view of a Chevrolet Agile tall hatchback car with high roofline, triangular corner taillights and flat upright tailgate",
+            "rear angle of a Chevrolet Agile compact hatchback showing blacked-out C-pillar glass illusion and tall rear bumper",
+            "a photo of a Chevrolet Agile tall compact hatchback car on a Brazilian street",
+        ],
+    },
+    "Chevrolet Sonic": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a Chevrolet Sonic Aveo hatchback car with exposed twin round motorcycle-style quad headlights, dual-port grille and gold bowtie",
+            "front angle of a sporty Chevrolet Sonic compact hatchback showing aggressive open twin round headlamps and sharp hood lines",
+            "rear view of a Chevrolet Sonic Aveo hatchback car with hidden rear door handles in C-pillar and twin round-element taillights",
+            "rear angle of a Chevrolet Sonic compact hatchback showing upright rear hatch and sporty roof spoiler",
+            "a photo of a Chevrolet Sonic Aveo compact hatchback car on a Brazilian road",
+        ],
+    },
+    "Fiat Stilo": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a Fiat Stilo medium five-door hatchback car with sharp rectangular grille, angular crisp headlights and flat sculpted hood",
+            "front angle of a Fiat Stilo medium hatchback showing German-inspired crisp straight lines and wide stance",
+            "rear view of a Fiat Stilo five-door hatchback car with wide horizontal tail lamps wrapping into the flat tailgate and sharp creases",
+            "rear angle of a Fiat Stilo medium hatchback showing boxy muscular rear shoulders and wide C-pillar",
+            "a photo of a Fiat Stilo five-door medium hatchback car in Brazil",
+        ],
+    },
+    "Fiat Bravo": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a Fiat Bravo sporty medium hatchback car with sweeping teardrop headlights, rounded trapezoidal grille and red Fiat badge",
+            "front angle of a sleek Italian Fiat Bravo five-door hatchback showing raked windshield and aerodynamic nose",
+            "rear view of a Fiat Bravo medium hatchback car with distinctive round twin-circle taillights and thick curved C-pillars",
+            "rear angle of a Fiat Bravo sporty hatchback showing curved rear glass, integrated spoiler and muscular haunches",
+            "a photo of a Fiat Bravo sporty five-door medium hatchback car on a Brazilian road",
+        ],
+    },
+    "Fiat 500": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a tiny retro Fiat 500 Cinquecento city car with round bubble headlights, chrome whisker grille bar and rounded beetle-like hood",
+            "front angle of a cute retro Fiat 500 two-door micro hatchback car on a street",
+            "rear view of a tiny rounded Fiat 500 micro city car with chrome-ringed vertical oval taillights and curved hatch",
+            "rear angle of a retro Fiat 500 Cinquecento city car showing arched roofline and compact rear overhang",
+            "a photo of a retro Fiat 500 Cinquecento micro two-door hatchback car in Brazil",
+        ],
+    },
+    "Volkswagen Fusca": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a classic air-cooled Volkswagen Beetle Fusca with iconic curved round fenders, round headlights, chrome bumper and sloping front hood",
+            "front angle of a vintage classic Volkswagen Fusca Beetle car on a Brazilian street",
+            "rear view of a classic Volkswagen Beetle Fusca showing rounded engine decklid, cooling louvers, oval taillights and curved rear fenders",
+            "rear angle of a Volkswagen Fusca or New Beetle showing iconic arched bubble silhouette and flared wheel arches",
+            "a photo of a classic Volkswagen Beetle Fusca passenger car in Brazil",
+        ],
+    },
+    "Volkswagen CrossFox": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a Volkswagen CrossFox rugged tall hatchback with black plastic body cladding, silver front skid plate, roof rails and auxiliary fog lights",
+            "front angle of a Volkswagen CrossFox adventure compact car showing elevated ride height and rugged black bumper",
+            "rear view of a Volkswagen CrossFox adventure hatchback featuring a large external spare tire mounted on a swing-away rear carrier",
+            "rear angle of a Volkswagen CrossFox showing high roof rack rails, black wheel arch flares and rear-mounted spare wheel",
+            "a photo of a rugged Volkswagen CrossFox adventure compact hatchback car in Brazil",
+        ],
+    },
+    "Nissan March": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a tiny rounded bubble-shaped Nissan Micra K13 March subcompact city car",
+            "front angle of a small bubbly Nissan Micra March hatchback car",
+            "rear view of a Nissan Micra K13 March rounded subcompact hatchback with curvy round tailgate",
+            "rear angle of a small cute bubble-shaped Nissan Micra March city car",
+            "a photo of a Nissan Micra K13 March subcompact city hatchback",
+        ],
+    },
+    "Nissan Tiida": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a Nissan Tiida C11 Versa hatchback car",
+            "front angle of a 2007-2013 Nissan Tiida C11 five-door hatchback car",
+            "rear view of a Nissan Tiida C11 hatchback car",
+            "rear angle of a Nissan Tiida C11 five-door hatchback car",
+            "a photo of a Nissan Tiida C11 Versa five-door hatchback car",
+        ],
+    },
+    "Hyundai i30": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a Hyundai i30 medium hatchback car with hexagonal front grille, sleek swept-back headlights and Hyundai emblem",
+            "front angle of a sporty Hyundai i30 five-door medium hatchback showing sculpted hood and fog lights",
+            "rear view of a Hyundai i30 medium hatchback car with tall vertical pillar taillights or wide wraparound LED lamps and roof spoiler",
+            "rear angle of a Hyundai i30 five-door hatchback showing wide stance and aerodynamic rear hatch",
+            "a photo of a Hyundai i30 medium five-door hatchback car on a Brazilian road",
+        ],
+    },
+    "Kia Picanto": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a tiny Kia Picanto Morning micro city hatchback with Kia tiger-nose grille, large bug-eyed or angular headlights and short hood",
+            "front angle of an ultra-compact Kia Picanto five-door city car on a Brazilian street",
+            "rear view of a tiny Kia Picanto micro hatchback with C-shaped vertical corner taillights and flat rear hatch",
+            "rear angle of a small Kia Picanto city car showing tall upright stance and very short rear overhang",
+            "a photo of a Kia Picanto Morning micro five-door city hatchback car in Brazil",
+        ],
+    },
+    "Kia Soul": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a boxy Kia Soul urban crossover hatchback with upright flat windshield, tiger-nose grille and squared-off front nose",
+            "front angle of a distinctive cube-shaped Kia Soul boxy hatchback car on a street",
+            "rear view of a boxy Kia Soul car with iconic tall vertical boomerang taillights framing a flat upright rear tailgate",
+            "rear angle of a Kia Soul urban box car showing flat vertical rear end and squared roofline",
+            "a photo of a boxy Kia Soul five-door urban hatchback car in Brazil",
+        ],
+    },
+    "Chery QQ": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a tiny Chery QQ micro city car with cheerful rounded headlights, smiling front bumper grille and tall narrow body",
+            "front angle of an ultra-compact Chery QQ micro hatchback car on a Brazilian street",
+            "rear view of a tiny Chery QQ subcompact car with vertical corner taillights, narrow body and flat glass hatch",
+            "rear angle of a small narrow Chery QQ city hatchback showing tall upright cabin and small wheels",
+            "a photo of a tiny Chery QQ micro city hatchback car in Brazil",
+        ],
+    },
+    "Renault Clio": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a classic Renault Clio subcompact hatchback car with triangular headlights, split grille flanking the Renault diamond and curved hood",
+            "front angle of a compact Renault Clio hatchback car on a Brazilian street",
+            "rear view of a Renault Clio small hatchback car with compact rounded-triangle corner taillights and curved rear glass",
+            "rear angle of a Renault Clio subcompact hatchback showing short two-box silhouette and Renault badge",
+            "a photo of a Renault Clio subcompact two-box hatchback car in Brazil",
+        ],
+    },
+    "Renault Megane": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a Renault Megane medium car with sharp swept headlights, twin grille openings flanking the Renault diamond and sculpted hood",
+            "front angle of a Renault Megane hatchback or sedan passenger car on a Brazilian street",
+            "rear view of a Renault Megane car showing distinctive angular bustle-back rear window or sleek horizontal taillights",
+            "rear angle of a Renault Megane medium passenger car showing wide sculpted rear quarters and Renault emblem",
+            "a photo of a Renault Megane medium passenger car in Brazil",
+        ],
+    },
+    "Suzuki Swift": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a sporty Suzuki Swift subcompact hatchback with flat floating roof, blackened A-pillars, large vertical headlights and Suzuki S grille",
+            "front angle of a Suzuki Swift compact hatchback car showing wide stance and sculpted bumper",
+            "rear view of a Suzuki Swift hatchback car with chunky corner taillights, blacked-out C-pillar and flat roof",
+            "rear angle of a Suzuki Swift mini-inspired hatchback showing short rear overhang and wide rear track",
+            "a photo of a Suzuki Swift subcompact hatchback car on a Brazilian road",
+        ],
+    },
+    # --- Sedans adicionados ---
+    "Chevrolet Vectra": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a Chevrolet Vectra Opel Vectra medium executive sedan with angular headlights, horizontal chrome grille bar and Chevrolet bowtie",
+            "front angle of a Chevrolet Vectra four-door sedan showing streamlined side mirrors flowing from the hood or crisp midsize proportions",
+            "rear view of a Chevrolet Vectra Opel Vectra four-door sedan with elongated separate trunk lid and trapezoidal corner taillights",
+            "rear angle of a Chevrolet Vectra executive three-box sedan showing clean wide rear deck and chrome trim",
+            "a photo of a Chevrolet Vectra Opel Vectra four-door medium sedan car in Brazil",
+        ],
+    },
+    "Chevrolet Monza": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a classic 1980s-1990s Chevrolet Monza Opel Ascona C boxy sedan with rectangular headlights, horizontal slatted grille and flat hood",
+            "front angle of a vintage boxy Chevrolet Monza classic Brazilian sedan car on a street",
+            "rear view of a classic boxy Chevrolet Monza four-door sedan with long flat separate trunk and wide rectangular horizontal taillights",
+            "rear angle of a 1990s Chevrolet Monza Tubarao three-box sedan showing sharp angular body lines and chrome window trim",
+            "a photo of a classic 1980s-1990s Chevrolet Monza four-door sedan car in Brazil",
+        ],
+    },
+    "Chevrolet Cobalt": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a Chevrolet Cobalt compact tall sedan with large dual-port grille, oversized headlights and gold Chevrolet bowtie",
+            "front angle of a spacious Chevrolet Cobalt four-door sedan showing tall cabin roof and upright front fascia",
+            "rear view of a Chevrolet Cobalt four-door sedan with tall boxy separate rear trunk and vertical or split L-shaped taillights",
+            "rear angle of a Chevrolet Cobalt tall three-box family sedan showing high rear decklid and generous cabin height",
+            "a photo of a Chevrolet Cobalt four-door compact three-box sedan car on a Brazilian road",
+        ],
+    },
+    "Chevrolet Omega": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a large executive Chevrolet Omega Opel Omega Holden Commodore sedan with long hood, wide grille and low luxury stance",
+            "front angle of a classic or modern Chevrolet Omega full-size luxury sedan car in Brazil",
+            "rear view of a large Chevrolet Omega four-door luxury sedan with long wide rear trunk and classic wraparound taillights",
+            "rear angle of a Chevrolet Omega Opel Omega executive rear-wheel-drive three-box sedan showing long wheelbase",
+            "a photo of a large executive Chevrolet Omega four-door sedan car in Brazil",
+        ],
+    },
+    "Fiat Linea": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a Fiat Linea compact-medium sedan with large chrome-rimmed trapezoidal front grille, Punto-style swept headlights and red Fiat badge",
+            "front angle of an elegant Fiat Linea four-door sedan showing chrome grille slats and flowing roofline",
+            "rear view of a Fiat Linea four-door sedan with elongated separate rear trunk, chrome strip above the license plate and teardrop taillights",
+            "rear angle of a Fiat Linea three-box sedan showing rounded rear quarters and sleek boot lid",
+            "a photo of a Fiat Linea four-door three-box sedan car on a Brazilian road",
+        ],
+    },
+    "Fiat Marea": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a classic late-1990s Fiat Marea medium sedan with slim oval grille, almond headlights and curved aerodynamic front hood",
+            "front angle of a Fiat Marea four-door passenger sedan on a Brazilian street",
+            "rear view of a Fiat Marea four-door sedan with distinctive curved boomerang or triangular rear taillights on a rounded trunk lid",
+            "rear angle of a Fiat Marea three-box sedan showing smooth rounded 1990s Italian styling and rear bumper",
+            "a photo of a classic Fiat Marea four-door medium sedan car in Brazil",
+        ],
+    },
+    "Fiat Tempra": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a classic 1990s Fiat Tempra boxy sedan with rectangular headlights, narrow horizontal grille and flat angular hood",
+            "front angle of a vintage 1990s Fiat Tempra four-door sedan car on a Brazilian street",
+            "rear view of a classic 1990s Fiat Tempra sedan with high tall boxy separate trunk and wide dark-tinted horizontal taillights",
+            "rear angle of a boxy 1990s Fiat Tempra three-box sedan showing crisp straight beltline and tall rear deck",
+            "a photo of a classic 1990s Fiat Tempra four-door three-box sedan car in Brazil",
+        ],
+    },
+    "Ford Fusion": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a large Ford Fusion Mondeo executive sedan with prominent Aston Martin trapezoidal chrome grille or three-bar chrome grille and sleek headlights",
+            "front angle of a modern Ford Fusion midsize luxury sedan showing long sculpted hood and low wide stance",
+            "rear view of a Ford Fusion four-door executive sedan with elongated trunk lid, horizontal LED taillights and dual exhausts",
+            "rear angle of a Ford Fusion Mondeo fastback-profile three-box sedan showing chrome trunk bar and Ford oval",
+            "a photo of a large executive Ford Fusion four-door sedan car on a Brazilian road",
+        ],
+    },
+    "Honda Accord": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a large executive Honda Accord midsize sedan with wide chrome front wing grille, sharp LED headlights and long low hood",
+            "front angle of a Honda Accord executive four-door sedan showing long wheelbase and wide luxury stance",
+            "rear view of a Honda Accord four-door executive sedan with elongated trunk lid and wide C-shaped or horizontal split taillights",
+            "rear angle of a Honda Accord midsize three-box sedan showing sleek fastback roof taper and dual exhaust tips",
+            "a photo of a large Honda Accord four-door executive sedan car on a Brazilian highway",
+        ],
+    },
+    "Hyundai Elantra": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a Hyundai Elantra Avante medium sedan with sweeping fluidic headlights, hexagonal grille and sleek coupe-like silhouette",
+            "front angle of a Hyundai Elantra four-door medium sedan showing sculpted hood creases and Hyundai emblem",
+            "rear view of a Hyundai Elantra four-door sedan with elongated trunk lid and sharp sweeping wraparound taillights",
+            "rear angle of a Hyundai Elantra three-box sedan showing fastback C-pillar curve and sporty rear bumper",
+            "a photo of a Hyundai Elantra medium four-door sedan car on a Brazilian road",
+        ],
+    },
+    "Hyundai Azera": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a large luxury Hyundai Azera Grandeur executive sedan with bold vertical-slat or cascading chrome grille and sweeping headlights",
+            "front angle of a wide low Hyundai Azera full-size luxury sedan showing long hood and chrome window moldings",
+            "rear view of a large Hyundai Azera Grandeur sedan with wide connected full-width taillight bar or sleek wraparound LED lamps and dual exhausts",
+            "rear angle of a Hyundai Azera executive three-box luxury sedan showing muscular rear haunches and long decklid",
+            "a photo of a large luxury Hyundai Azera Grandeur four-door sedan car in Brazil",
+        ],
+    },
+    "Kia Cerato": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a Kia Cerato Forte medium sedan with Kia tiger-nose grille, sharp swept headlights and sporty front bumper",
+            "front angle of a Kia Cerato four-door sedan showing low wide stance and sculpted hood",
+            "rear view of a Kia Cerato Forte four-door sedan with elongated separate trunk lid and wide horizontal LED taillights",
+            "rear angle of a Kia Cerato three-box medium sedan showing coupe-like roofline and integrated trunk lip",
+            "a photo of a Kia Cerato Forte four-door medium sedan car on a Brazilian road",
+        ],
+    },
+    "Renault Fluence": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a Renault Fluence medium sedan with sweeping curved nose, large Renault chrome diamond and almond headlights",
+            "front angle of a Renault Fluence four-door family sedan showing smooth rounded hood and chrome lower grille trim",
+            "rear view of a Renault Fluence four-door sedan with large rounded separate trunk and wide horizontal split taillights",
+            "rear angle of a Renault Fluence three-box medium sedan showing long rear overhang and curved beltline",
+            "a photo of a Renault Fluence four-door medium sedan car on a Brazilian road",
+        ],
+    },
+    "Renault Symbol": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a Renault Symbol Clio Sedan compact car with large triangular headlights, horizontal grille bar and Renault diamond emblem",
+            "front angle of a Renault Symbol four-door compact sedan on a Brazilian street",
+            "rear view of a Renault Symbol four-door compact sedan with tall narrow separate trunk lid and wraparound corner taillights",
+            "rear angle of a Renault Symbol three-box compact sedan showing Clio-derived front doors and elongated boot",
+            "a photo of a Renault Symbol four-door compact three-box sedan car in Brazil",
+        ],
+    },
+    "Volkswagen Bora": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a Volkswagen Bora Jetta Mk4 medium sedan with boxy rectangular headlights, horizontal chrome grille and rounded roof arch",
+            "front angle of a classic Volkswagen Bora four-door sedan car on a Brazilian street",
+            "rear view of a Volkswagen Bora Jetta Mk4 sedan with tall clean separate trunk lid and square red-and-amber corner taillights",
+            "rear angle of a Volkswagen Bora three-box compact-medium sedan showing thick C-pillar and clean German lines",
+            "a photo of a Volkswagen Bora four-door three-box sedan car in Brazil",
+        ],
+    },
+    "Volkswagen Passat": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a large executive Volkswagen Passat midsize sedan with wide horizontal chrome-slatted grille seamlessly joining crisp headlights",
+            "front angle of a Volkswagen Passat luxury four-door sedan showing long wide hood and low executive stance",
+            "rear view of a Volkswagen Passat executive sedan with wide clean trunk lid, centered VW emblem and sharp horizontal LED taillights",
+            "rear angle of a Volkswagen Passat midsize three-box sedan showing long chrome-trimmed side windows and wide rear track",
+            "a photo of a large executive Volkswagen Passat four-door sedan car on a Brazilian highway",
+        ],
+    },
+    "Toyota Camry": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a large luxury Toyota Camry executive sedan with wide lower bumper grille, sleek headlights and prominent Toyota badge",
+            "front angle of a Toyota Camry full-size executive four-door sedan showing long hood and wide luxury stance",
+            "rear view of a Toyota Camry four-door sedan with wide separate trunk lid and large horizontal split taillights",
+            "rear angle of a Toyota Camry executive three-box sedan showing long wheelbase and refined rear bumper",
+            "a photo of a large executive Toyota Camry four-door sedan car in Brazil",
+        ],
+    },
+    "Peugeot 408": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a Peugeot 408 medium sedan with steeply sloped windshield, large wide front grille, sharp feline headlights and Peugeot lion",
+            "front angle of a Peugeot 408 four-door sedan showing long curved hood and chrome grille trim",
+            "rear view of a Peugeot 408 four-door sedan with high sculpted trunk lid and wraparound red boomerang taillights",
+            "rear angle of a Peugeot 408 three-box medium sedan showing elongated rear quarters and tall boot",
+            "a photo of a Peugeot 408 four-door medium sedan car on a Brazilian road",
+        ],
+    },
+    "Citroën C4 Lounge": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a Citroen C4 Lounge medium sedan with chrome double chevron grille bars extending into sharp headlights and sculpted hood",
+            "front angle of a modern Citroen C4 Lounge four-door sedan showing chrome fog lamp trim and sleek profile",
+            "rear view of a Citroen C4 Lounge four-door sedan with concave rear window, distinct trunk lid and wide horizontal LED taillights",
+            "rear angle of a Citroen C4 Lounge three-box executive sedan showing chrome window surrounds and double chevron badge",
+            "a photo of a Citroen C4 Lounge four-door medium sedan car on a Brazilian road",
+        ],
+    },
+    "Citroën C4 Pallas": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a Citroen C4 Pallas medium sedan with boomerang headlights, double chevron chrome grille bars and curved hood",
+            "front angle of a Citroen C4 Pallas four-door executive sedan on a Brazilian street",
+            "rear view of a Citroen C4 Pallas four-door sedan with long protruding separate trunk and distinctive high L-shaped corner taillights",
+            "rear angle of a Citroen C4 Pallas long-wheelbase three-box sedan showing tall vertical trunk edge and curved roofline",
+            "a photo of a Citroen C4 Pallas four-door medium sedan car in Brazil",
+        ],
+    },
+    "BYD Seal": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a sleek electric BYD Seal fastback sports sedan with closed aerodynamic nose, boomerang C-shaped LED headlights and BYD badge",
+            "front angle of a modern BYD Seal EV sedan showing low aggressive hood, flush door handles and sporty front splitter",
+            "rear view of a BYD Seal electric sports sedan with full-width continuous dotted LED light bar and aerodynamic rear diffuser",
+            "rear angle of a sleek BYD Seal EV fastback sedan showing sloping coupe roofline and muscular rear fenders",
+            "a photo of a modern BYD Seal all-electric sports sedan car on a Brazilian road",
+        ],
+    },
+    "BYD King": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a BYD King Destroyer 05 hybrid sedan with wide parametric dot-matrix grille, slim LED headlights and chrome front bar",
+            "front angle of a modern BYD King four-door plug-in hybrid sedan on a Brazilian street",
+            "rear view of a BYD King four-door hybrid sedan featuring a sleek full-width continuous LED taillight bar across the trunk",
+            "rear angle of a BYD King three-box sedan showing clean fastback C-pillar and modern aerodynamic bumper",
+            "a photo of a modern BYD King Destroyer 05 hybrid sedan car on a Brazilian road",
+        ],
+    },
+    # --- Peruas / Station Wagons ---
+    "Fiat Palio Weekend": {
+        "categoria": "Perua / Station Wagon",
+        "prompts": [
+            "side and front three-quarters view of a long Fiat Palio Weekend Adventure station wagon estate car showing elongated wagon roofline, long rear cargo window and roof rack rails",
+            "three-quarters view of a Fiat Palio Weekend elongated station wagon estate car with plastic wheel arch cladding and long rear overhang",
+            "rear view of a Fiat Palio Weekend station wagon estate car with elongated cargo roofline, tall rear quarter windows and wide wagon tailgate",
+            "rear angle of a Fiat Palio Weekend elongated estate station wagon showing long rear cargo compartment and roof rails",
+            "a photo of a long five-door Fiat Palio Weekend station wagon estate car in Brazil",
+        ],
+    },
+    "Volkswagen Parati": {
+        "categoria": "Perua / Station Wagon",
+        "prompts": [
+            "front three-quarters view of a Volkswagen Parati station wagon estate car with Gol front fascia, elongated roof with rails and long side windows",
+            "front angle of a Volkswagen Parati Gol Variant station wagon estate car on a Brazilian street",
+            "rear view of a Volkswagen Parati station wagon estate car with long rear cargo area, upright tailgate and horizontal taillights",
+            "rear angle of a Volkswagen Parati elongated estate wagon showing three side windows and squared rear overhang",
+            "a photo of a Volkswagen Parati station wagon estate car in Brazil",
+        ],
+    },
+    "Volkswagen SpaceFox": {
+        "categoria": "Perua / Station Wagon",
+        "prompts": [
+            "front three-quarters view of a Volkswagen SpaceFox Suran tall station wagon estate car with Fox front headlights, roof rack rails and elongated body",
+            "front angle of a Volkswagen SpaceFox tall compact station wagon estate car on a Brazilian street",
+            "rear view of a Volkswagen SpaceFox Suran station wagon with tall elongated cargo rear end, long rear side windows and horizontal taillights",
+            "rear angle of a Volkswagen SpaceFox tall estate wagon showing vertical rear tailgate and roof rails",
+            "a photo of a Volkswagen SpaceFox Suran station wagon estate car in Brazil",
+        ],
+    },
+    "Toyota Fielder": {
+        "categoria": "Perua / Station Wagon",
+        "prompts": [
+            "front three-quarters view of a Toyota Fielder Corolla Fielder station wagon estate car with classic Corolla front grille, headlights and elongated roof with rails",
+            "front angle of a Toyota Corolla Fielder five-door station wagon car on a Brazilian street",
+            "rear view of a Toyota Fielder station wagon estate car with long extended rear cargo glass, vertical-corner taillights and wide tailgate",
+            "rear angle of a Toyota Corolla Fielder estate wagon showing elongated three-window side profile and Toyota badge",
+            "a photo of a Toyota Corolla Fielder station wagon estate car in Brazil",
+        ],
+    },
+    # --- SUVs / Crossovers adicionados ---
+    "Honda WR-V": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a Honda WR-V Fit-based subcompact crossover with short steeply sloped MPV hood, thick chrome grille bar, black cladding and roof rack rails",
+            "front angle of a Honda WR-V rugged subcompact tall-roof Fit crossover showing small wheels and silver skid plate",
+            "rear view of a Honda WR-V subcompact crossover with L-shaped horizontal taillights wrapping onto the tailgate and tall Fit-like rear glass",
+            "rear angle of a Honda WR-V subcompact crossover showing short upright tail, roof rails and raised ride height",
+            "a photo of a Honda WR-V Fit-based subcompact crossover car",
+        ],
+    },
+    "Honda CR-V": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a large full-bodied Honda CR-V midsize family SUV with wide heavy front bumper, bold Honda grille and large wheelbase",
+            "front angle of a large Honda CR-V family SUV showing tall broad hood, wide track and commanding midsize SUV proportions",
+            "rear view of a large Honda CR-V midsize SUV featuring signature tall vertical L-shaped D-pillar taillights flanking the wide rear glass",
+            "rear angle of a large Honda CR-V family SUV showing long rear quarter windows, wide upright tailgate and black lower cladding",
+            "a photo of a large Honda CR-V midsize family SUV on a road",
+        ],
+    },
+    "Jeep Commander": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a large 7-seat Jeep Commander SUV with seven-slot front grille, slim rectangular LED headlights, squared hood and roof rack rails",
+            "front angle of a long large Jeep Commander three-row SUV showing upright bold front fascia and Jeep lettering",
+            "rear view of a large Jeep Commander 7-seater SUV with long boxy rear overhang, flat upright tailgate and ultra-slim horizontal LED taillights",
+            "rear angle of a large Jeep Commander SUV showing elongated rear quarter glass, chrome roof arch trim and high ground clearance",
+            "a photo of a large 7-seat Jeep Commander SUV car on a Brazilian road",
+        ],
+    },
+    "Volkswagen Taos": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a Volkswagen Taos medium SUV with wide illuminated grille light bar, prominent black front bumper X-trim, LED headlights and roof rails",
+            "front angle of a modern Volkswagen Taos compact-midsize SUV showing high sculpted hood and squared wheel arches",
+            "rear view of a Volkswagen Taos medium SUV with crisp geometric horizontal LED taillights, centered VW emblem and roof rack rails",
+            "rear angle of a modern Volkswagen Taos crossover SUV showing clean squared German proportions and silver lower diffuser",
+            "a photo of a modern Volkswagen Taos medium crossover SUV car on a Brazilian road",
+        ],
+    },
+    "Volkswagen Tiguan": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a Volkswagen Tiguan Allspace midsize SUV with wide multi-slat chrome grille, sharp rectangular headlights, roof rails and high ground clearance",
+            "front angle of a Volkswagen Tiguan family SUV showing clean sculpted hood creases and prominent VW emblem",
+            "rear view of a Volkswagen Tiguan midsize SUV with sharp geometric L-shaped LED taillights, crisp horizontal tailgate creases and roof rails",
+            "rear angle of a Volkswagen Tiguan Allspace 7-seat SUV showing long rear overhang and clean muscular wheel arches",
+            "a photo of a Volkswagen Tiguan midsize family SUV car on a Brazilian road",
+        ],
+    },
+    "Chevrolet Equinox": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a Chevrolet Equinox midsize crossover SUV with wide chrome dual-port grille, sleek headlights, roof rails and gold or black bowtie",
+            "front angle of a modern Chevrolet Equinox SUV showing sculpted front fenders and wide commanding stance",
+            "rear view of a Chevrolet Equinox midsize SUV with wide horizontal wraparound LED taillights and sculpted rear tailgate",
+            "rear angle of a Chevrolet Equinox crossover SUV showing upswept C-pillar window line, roof rails and dual exhausts",
+            "a photo of a Chevrolet Equinox midsize crossover SUV car on a Brazilian road",
+        ],
+    },
+    "Chevrolet Trailblazer": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a large rugged Chevrolet Trailblazer 7-seat body-on-frame SUV with massive S10-style front grille, high hood, side steps and roof rails",
+            "front angle of a tall heavy-duty Chevrolet Trailblazer 4x4 SUV on a Brazilian road",
+            "rear view of a large tall Chevrolet Trailblazer SUV with upright rear glass, high ground clearance and wide horizontal taillights",
+            "rear angle of a big Chevrolet Trailblazer 4x4 SUV showing side running boards, long rear side windows and roof rack rails",
+            "a photo of a large rugged Chevrolet Trailblazer 7-seat 4x4 SUV in Brazil",
+        ],
+    },
+    "Hyundai ix35": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a Hyundai ix35 Tucson LM crossover SUV with hexagonal grille, swept-back fluidic headlights, roof rails and sculpted hood",
+            "front angle of a Hyundai ix35 compact-medium SUV on a Brazilian road showing dynamic curvy front bumper",
+            "rear view of a Hyundai ix35 crossover SUV with sloped rear window, wraparound leaf-shaped taillights and black lower bumper cladding",
+            "rear angle of a Hyundai ix35 fluidic crossover SUV showing upswept rear window beltline and roof rack rails",
+            "a photo of a Hyundai ix35 crossover SUV car on a Brazilian road",
+        ],
+    },
+    "Hyundai Santa Fe": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a large Hyundai Santa Fe midsize-large SUV with wide chrome hexagonal or cascading grille, muscular hood and roof rack rails",
+            "front angle of a Hyundai Santa Fe 7-seat family SUV showing wide commanding stance and high ground clearance",
+            "rear view of a large Hyundai Santa Fe SUV with wide wraparound taillights, dual exhausts and tall rear tailgate",
+            "rear angle of a Hyundai Santa Fe family SUV showing long three-row body, roof rails and silver lower skid plate",
+            "a photo of a large Hyundai Santa Fe family SUV car on a Brazilian road",
+        ],
+    },
+    "Kia Sportage": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a Kia Sportage medium crossover SUV with Kia tiger-nose grille, high-mounted sleek headlights or boomerang DRLs and roof rack rails",
+            "front angle of a Kia Sportage crossover SUV showing bold muscular front fascia and black wheel arch cladding",
+            "rear view of a Kia Sportage medium SUV with wide horizontal connected taillights and sculpted high rear bumper",
+            "rear angle of a Kia Sportage crossover SUV showing thick sporty C-pillar, roof spoiler and elevated ride height",
+            "a photo of a Kia Sportage medium crossover SUV car on a Brazilian road",
+        ],
+    },
+    "Kia Sorento": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a large 7-seat Kia Sorento family SUV with wide tiger-nose grille, squared muscular hood and roof rack rails",
+            "front angle of a large Kia Sorento midsize-large SUV showing commanding height and black lower cladding",
+            "rear view of a large Kia Sorento SUV with tall upright tailgate and wide horizontal or split vertical LED taillights",
+            "rear angle of a large Kia Sorento three-row SUV showing long squared body, roof rails and high ground clearance",
+            "a photo of a large Kia Sorento family SUV car on a Brazilian road",
+        ],
+    },
+    "Mitsubishi ASX": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a Mitsubishi ASX Outlander Sport RVR compact crossover SUV with bold trapezoidal jet-fighter grille or Dynamic Shield chrome X-face",
+            "front angle of a Mitsubishi ASX compact SUV showing sharp angry headlights, black bumper cladding and roof rails",
+            "rear view of a Mitsubishi ASX compact crossover SUV with sharp slim horizontal taillights and angled rear hatch",
+            "rear angle of a Mitsubishi ASX RVR crossover SUV showing compact muscular stance, roof rails and high ground clearance",
+            "a photo of a Mitsubishi ASX Outlander Sport compact crossover SUV car in Brazil",
+        ],
+    },
+    "Mitsubishi Outlander": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a Mitsubishi Outlander medium-large SUV with Dynamic Shield chrome X-frame front grille, slim headlights and roof rack rails",
+            "front angle of a Mitsubishi Outlander 7-seat family SUV showing long hood and elevated ground clearance",
+            "rear view of a Mitsubishi Outlander SUV with long upright rear tailgate, silver roof rails and horizontal LED taillights",
+            "rear angle of a Mitsubishi Outlander family SUV showing elongated rear quarter windows and clean boxy rear profile",
+            "a photo of a Mitsubishi Outlander midsize-large SUV car on a Brazilian road",
+        ],
+    },
+    "Mitsubishi Pajero": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a rugged Mitsubishi Pajero Montero Sport Full TR4 4x4 SUV with tall ground clearance, bold chrome grille, side steps and roof rack rails",
+            "front angle of a heavy-duty Mitsubishi Pajero off-road 4x4 SUV on a Brazilian road",
+            "rear view of a Mitsubishi Pajero SUV with tall boxy upright body, high clearance, vertical or dripping taillights or external rear spare tire",
+            "rear angle of a rugged Mitsubishi Pajero Montero 4x4 SUV showing flared wheel arches, running boards and roof rails",
+            "a photo of a rugged Mitsubishi Pajero Montero 4x4 off-road SUV in Brazil",
+        ],
+    },
+    "Toyota RAV4": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a Toyota RAV4 medium SUV with bold octagonal grille, angular headlights, squared black wheel arches and roof rack rails",
+            "front angle of a Toyota RAV4 crossover SUV showing high sculpted hood and commanding stance",
+            "rear view of a Toyota RAV4 SUV with wide horizontal taillights connected by a chrome or black trim bar and upright rear tailgate",
+            "rear angle of a Toyota RAV4 crossover SUV showing trapezoidal fender flares, roof rails and high ground clearance",
+            "a photo of a Toyota RAV4 medium crossover SUV car on a Brazilian road",
+        ],
+    },
+    "Peugeot 2008": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a Peugeot 2008 compact crossover SUV with lion-claw headlights, bold front grille, black wheel arch cladding and roof rack rails",
+            "front angle of a modern Peugeot 2008 compact SUV showing sculpted hood and Peugeot lion badge",
+            "rear view of a Peugeot 2008 compact SUV with glossy black horizontal band connecting three-claw LED taillights and black rear bumper",
+            "rear angle of a Peugeot 2008 crossover SUV showing floating roof accents, roof rails and raised ground clearance",
+            "a photo of a Peugeot 2008 compact crossover SUV car on a Brazilian road",
+        ],
+    },
+    "Peugeot 3008": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a modern Peugeot 3008 medium SUV with frameless parametric grille or saber-tooth LED DRLs, tall muscular hood and roof rails",
+            "front angle of a Peugeot 3008 crossover SUV showing sleek floating roof, chrome trim and high ground clearance",
+            "rear view of a Peugeot 3008 medium SUV with full-width black band housing three-claw LED taillights and high sculpted bumper",
+            "rear angle of a Peugeot 3008 SUV showing sharp modern creases, blacked-out D-pillar and roof rails",
+            "a photo of a modern Peugeot 3008 medium crossover SUV car on a Brazilian road",
+        ],
+    },
+    "Citroën C4 Cactus": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a Citroen C4 Cactus compact crossover SUV with two-tier split LED headlights, double chevron grille, roof rails and protective side Airbumps",
+            "front angle of a Citroen C4 Cactus crossover SUV showing high rounded hood and colorful fog lamp bezels",
+            "rear view of a Citroen C4 Cactus compact SUV with 3D horizontal taillights, black lower cladding and floating C-pillar",
+            "rear angle of a Citroen C4 Cactus crossover showing distinctive lower door Airbump panels and roof rack rails",
+            "a photo of a Citroen C4 Cactus compact crossover SUV car on a Brazilian road",
+        ],
+    },
+    "Renault Captur": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a Renault Captur Kaptur compact SUV with large Renault chrome diamond on glossy black grille, C-shaped LED DRLs and two-tone roof",
+            "front angle of a Renault Captur crossover SUV showing curvy muscular fenders and high ground clearance",
+            "rear view of a Renault Captur SUV with rounded tailgate, horizontal C-shaped taillights and black bumper cladding",
+            "rear angle of a Renault Captur two-tone crossover SUV showing rounded curves, roof rails and elevated stance",
+            "a photo of a Renault Captur compact crossover SUV car on a Brazilian road",
+        ],
+    },
+    "Renault Kardian": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a modern Renault Kardian compact crossover SUV with split headlights, diamond-pattern black grille, flat Renault logo and roof rack rails",
+            "front angle of a modern Renault Kardian subcompact SUV showing sculpted hood, silver skid plate and black wheel arch cladding",
+            "rear view of a Renault Kardian compact SUV with distinctive C-shaped boomerang taillights and upright sculpted tailgate",
+            "rear angle of a modern Renault Kardian crossover SUV showing modular roof rails and high ground clearance",
+            "a photo of a modern Renault Kardian compact crossover SUV car on a Brazilian road",
+        ],
+    },
+    "Chery Tiggo 5x": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a Chery Tiggo 5x SUV",
+            "front angle of a Chery Tiggo 4 Tiggo 5x crossover SUV",
+            "rear view of a Chery Tiggo 5x SUV",
+            "rear angle of a Chery Tiggo 4 Tiggo 5x crossover SUV",
+            "a photo of a Chery Tiggo 5x SUV car",
+        ],
+    },
+    "Chery Tiggo 7": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a Chery Tiggo 7 Pro SUV",
+            "front angle of a Chery Tiggo 7 crossover SUV",
+            "rear view of a Chery Tiggo 7 Pro SUV",
+            "rear angle of a Chery Tiggo 7 crossover SUV",
+            "a photo of a Chery Tiggo 7 Pro SUV car",
+        ],
+    },
+    "Chery Tiggo 8": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a large 7-seat Caoa Chery Tiggo 8 SUV with massive diamond-matrix chrome grille, slim LED headlights and roof rack rails",
+            "front angle of a large Chery Tiggo 8 three-row family SUV showing tall commanding front fascia and chrome trim",
+            "rear view of a large Chery Tiggo 8 7-seat SUV with full-width connected LED light bar, dual exhausts and tall upright tailgate",
+            "rear angle of a large Chery Tiggo 8 SUV showing long three-row rear quarter window, roof rails and high ground clearance",
+            "a photo of a large 7-seat Caoa Chery Tiggo 8 SUV car on a Brazilian road",
+        ],
+    },
+    "BYD Song Plus": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a BYD Song Plus DM-i Seal U medium SUV with Dragon Face grille or sleek ocean nose, slim LED headlights and roof rack rails",
+            "front angle of a modern BYD Song Plus hybrid crossover SUV showing sculpted hood and wide aerodynamic stance",
+            "rear view of a BYD Song Plus Seal U medium SUV featuring a sleek full-width continuous LED taillight bar and BYD lettering",
+            "rear angle of a BYD Song Plus crossover SUV showing smooth modern body lines, roof rails and tailgate spoiler",
+            "a photo of a modern BYD Song Plus DM-i medium SUV car on a Brazilian road",
+        ],
+    },
+    "BYD Yuan Plus": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a BYD Yuan Plus Atto 3 electric compact SUV with thick silver Dragon Face mustache bar across closed grille and LED headlights",
+            "front angle of a BYD Yuan Plus Atto 3 EV crossover SUV showing smooth aerodynamic hood and black wheel arch cladding",
+            "rear view of a BYD Yuan Plus Atto 3 electric SUV featuring a full-width continuous LED light bar and textured silver dragon-scale C-pillar panel",
+            "rear angle of a BYD Yuan Plus Atto 3 EV crossover showing distinctive patterned C-pillar trim and roof rack rails",
+            "a photo of a modern BYD Yuan Plus Atto 3 electric crossover SUV car on a Brazilian road",
+        ],
+    },
+    "GWM Haval H6": {
+        "categoria": "SUV / Utilitário",
+        "prompts": [
+            "front three-quarters view of a GWM Haval H6 medium hybrid SUV with large cascading star-matrix or horizontal-bar chrome grille, sharp LED headlights and roof rails",
+            "front angle of a modern GWM Haval H6 SUV showing tall muscular front fascia, vertical fog lamp intakes and Haval lettering",
+            "rear view of a GWM Haval H6 medium SUV featuring a wide continuous full-width LED taillight bar across the tailgate with HAVAL badge",
+            "rear angle of a GWM Haval H6 crossover SUV showing sleek coupe-like or boxy rear quarters, roof rails and high ground clearance",
+            "a photo of a modern GWM Haval H6 hybrid medium SUV car on a Brazilian road",
+        ],
+    },
+    # --- Picapes adicionadas ---
+    "Mitsubishi L200 Triton": {
+        "categoria": "Picape",
+        "prompts": [
+            "front three-quarters view of a Mitsubishi L200 Triton double-cab 4x4 pickup truck with Dynamic Shield or curved J-line cab-to-bed design and high ground clearance",
+            "front angle of a rugged Mitsubishi L200 Triton midsize pickup truck showing bold grille, skid plate and flared wheel arches",
+            "rear view of a Mitsubishi L200 Triton pickup truck showing open rear cargo bed, vertical corner taillights and tailgate",
+            "rear angle of a Mitsubishi L200 Triton double-cab pickup truck showing open cargo bed, sports bar roll bar and side steps",
+            "a photo of a rugged Mitsubishi L200 Triton double-cab 4x4 pickup truck on a Brazilian road",
+        ],
+    },
+    "Nissan Frontier": {
+        "categoria": "Picape",
+        "prompts": [
+            "front three-quarters view of a Nissan Frontier Navara double-cab 4x4 pickup truck with bold interlocked V-motion grille, C-shaped LED headlights and high hood",
+            "front angle of a rugged Nissan Frontier midsize pickup truck showing muscular fenders and commanding off-road stance",
+            "rear view of a Nissan Frontier Navara pickup truck showing open rear cargo bed, vertical taillights and stamped tailgate",
+            "rear angle of a Nissan Frontier double-cab pickup truck showing open cargo bed, tubular sports bar and side running boards",
+            "a photo of a rugged Nissan Frontier Navara double-cab 4x4 pickup truck on a Brazilian road",
+        ],
+    },
+    "Chevrolet D20": {
+        "categoria": "Picape",
+        "prompts": [
+            "front three-quarters view of a classic vintage boxy 1980s-1990s Chevrolet D20 pickup truck with square dual or single rectangular headlights and wide chrome slatted grille",
+            "front angle of a classic heavy-duty Chevrolet D20 Brazilian pickup truck on a street",
+            "rear view of a classic boxy Chevrolet D20 pickup truck showing long straight open steel cargo bed and vertical rectangular taillights",
+            "rear angle of an older square Chevrolet D20 single-cab or double-cab pickup truck showing flat 1980s sheet metal and chrome bumper",
+            "a photo of a classic vintage boxy Chevrolet D20 pickup truck in Brazil",
+        ],
+    },
+    "Ford Courier": {
+        "categoria": "Picape",
+        "prompts": [
+            "front three-quarters view of a small Ford Courier Brazilian compact utility pickup truck with Fiesta front headlights, oval grille and compact cab",
+            "front angle of a small Ford Courier two-door light utility pickup truck on a Brazilian street",
+            "rear view of a small Ford Courier utility pickup truck showing deep long open rear cargo bed and tall vertical corner taillights",
+            "rear angle of a compact Ford Courier single-cab pickup truck showing Fiesta-derived cab attached to a boxy utility cargo bed",
+            "a photo of a small Ford Courier Brazilian compact utility pickup truck in Brazil",
+        ],
+    },
+    "Ford Maverick": {
+        "categoria": "Picape",
+        "prompts": [
+            "front three-quarters view of a modern Ford Maverick compact unibody pickup truck with wide horizontal bar connecting C-clamp headlights and black lower cladding",
+            "front angle of a modern Ford Maverick four-door crew-cab pickup truck showing boxy upright hood and Ford blue oval",
+            "rear view of a Ford Maverick pickup truck showing open rear cargo bed, vertical taillights and tailgate with stamped MAVERICK lettering",
+            "rear angle of a modern Ford Maverick unibody crew-cab pickup truck showing seamless cab-to-bed side profile and black bed rails",
+            "a photo of a modern Ford Maverick compact crew-cab pickup truck on a Brazilian road",
+        ],
+    },
+    "RAM Rampage": {
+        "categoria": "Picape",
+        "prompts": [
+            "front three-quarters view of a RAM Rampage pickup truck with massive bold RAM lettering grille, aggressive rectangular LED headlights and muscular hood bulge",
+            "front angle of a modern RAM Rampage crew-cab pickup truck showing rugged American truck styling in compact-midsize proportions",
+            "rear view of a RAM Rampage pickup truck showing open cargo bed, American-flag patterned vertical LED taillights and large RAM ram-head emblem",
+            "rear angle of a RAM Rampage four-door pickup truck showing sculpted rear fenders, dual exhausts and high beltline",
+            "a photo of a modern RAM Rampage crew-cab pickup truck on a Brazilian road",
+        ],
+    },
+    "Fiat Titano": {
+        "categoria": "Picape",
+        "prompts": [
+            "front three-quarters view of a Fiat Titano Peugeot Landtrek double-cab midsize pickup truck with large grille, fang-like vertical LED DRLs and FIAT lettering",
+            "front angle of a modern Fiat Titano 4x4 midsize pickup truck showing high hood, silver skid plate and rugged bumper",
+            "rear view of a Fiat Titano pickup truck showing open rear cargo bed, vertical corner taillights and wide tailgate with FIAT script",
+            "rear angle of a Fiat Titano double-cab pickup truck showing open cargo bed, sports bar roll bar and side steps",
+            "a photo of a modern Fiat Titano double-cab midsize pickup truck on a Brazilian road",
+        ],
+    },
+    # --- Minivans / Vans / Utilitários adicionados ---
+    "Chevrolet Meriva": {
+        "categoria": "Minivan",
+        "prompts": [
+            "front three-quarters view of a Chevrolet Meriva Opel Meriva A compact tall MPV minivan with short sloping hood, triangular headlights and Chevrolet bowtie",
+            "front angle of a Chevrolet Meriva tall one-box compact family minivan on a Brazilian street",
+            "rear view of a Chevrolet Meriva Opel Meriva compact minivan with high-mounted vertical taillights flanking the rear hatch glass",
+            "rear angle of a Chevrolet Meriva compact MPV showing tall boxy cabin, large side windows and flat rear tailgate",
+            "a photo of a Chevrolet Meriva Opel Meriva compact family minivan MPV car in Brazil",
+        ],
+    },
+    "Chevrolet Zafira": {
+        "categoria": "Minivan",
+        "prompts": [
+            "front three-quarters view of a Chevrolet Zafira Opel Zafira A 7-seat family minivan MPV with wide Astra-style headlights, short hood and tall cabin",
+            "front angle of a Chevrolet Zafira multi-purpose 7-seater family minivan on a Brazilian street",
+            "rear view of a Chevrolet Zafira Opel Zafira MPV minivan with upright flat tailgate, roof rails and horizontal-vertical corner taillights",
+            "rear angle of a long Chevrolet Zafira 7-seat family minivan showing three large side windows and tall roof",
+            "a photo of a Chevrolet Zafira Opel Zafira 7-seat family minivan MPV car in Brazil",
+        ],
+    },
+    "Fiat Idea": {
+        "categoria": "Minivan",
+        "prompts": [
+            "front three-quarters view of a Fiat Idea compact tall MPV minivan with high upright windshield, large triangular or rounded headlights and tall cabin",
+            "front angle of a Fiat Idea family mini-MPV car on a Brazilian street",
+            "rear view of a Fiat Idea compact tall minivan with high upright tailgate and tall vertical rear corner taillights",
+            "rear angle of a Fiat Idea compact MPV showing tall boxy greenhouse, roof rails and short hood",
+            "a photo of a Fiat Idea compact tall family MPV minivan car in Brazil",
+        ],
+    },
+    "Fiat Doblo": {
+        "categoria": "Furgão / Van",
+        "prompts": [
+            "front three-quarters view of a boxy tall Fiat Doblo utility van and MPV with high flat roof, sliding side doors and tall upright windshield",
+            "front angle of a Fiat Doblo Adventure or Cargo tall utility van on a Brazilian street",
+            "rear view of a boxy tall Fiat Doblo utility van showing massive tall flat vertical rear hatch or asymmetric split cargo doors and vertical taillights",
+            "rear angle of a Fiat Doblo tall cubic utility van showing very high squared roofline and sliding door rail",
+            "a photo of a boxy tall Fiat Doblo utility passenger or cargo van in Brazil",
+        ],
+    },
+    "Nissan Livina": {
+        "categoria": "Minivan",
+        "prompts": [
+            "front three-quarters view of a Nissan Livina Grand Livina compact family minivan MPV with split chrome-tooth Nissan grille, large headlights and tall station-wagon cabin",
+            "front angle of a Nissan Livina MPV family car on a Brazilian street",
+            "rear view of a Nissan Livina compact family minivan with large wraparound horizontal-triangular taillights and tall upright hatch",
+            "rear angle of a Nissan Livina MPV minivan showing long roofline, roof rails and spacious rear cabin",
+            "a photo of a Nissan Livina compact family minivan MPV car in Brazil",
+        ],
+    },
+    "Volkswagen Kombi": {
+        "categoria": "Furgão / Van",
+        "prompts": [
+            "front three-quarters view of a classic Volkswagen Kombi Type 2 T2 boxy flat-front van bus with round headlights, prominent round VW emblem on flat nose and split or curved windshield",
+            "front angle of a classic white or two-tone Volkswagen Kombi T2 bus van on a Brazilian street",
+            "rear view of a classic boxy Volkswagen Kombi T2 van showing flat vertical rear engine hatch, cooling vents and small rectangular taillights",
+            "rear angle of a classic Volkswagen Kombi van bus showing iconic boxy bread-loaf silhouette and flat vertical sides",
+            "a photo of a classic Volkswagen Kombi Type 2 utility passenger or cargo van in Brazil",
+        ],
+    },
+    "Renault Kangoo": {
+        "categoria": "Furgão / Van",
+        "prompts": [
+            "front three-quarters view of a Renault Kangoo compact utility cargo or passenger van with short sloping nose, tall high-roof cargo box and Renault diamond",
+            "front angle of a white Renault Kangoo small commercial utility panel van on a Brazilian street",
+            "rear view of a Renault Kangoo compact high-roof delivery van showing asymmetric split rear cargo doors and tall vertical pillar taillights",
+            "rear angle of a Renault Kangoo compact commercial van showing stepped high roof behind the front seats and sliding side door",
+            "a photo of a Renault Kangoo compact commercial utility van in Brazil",
+        ],
+    },
+    "Renault Master": {
+        "categoria": "Furgão / Van",
+        "prompts": [
+            "front three-quarters view of a large tall white Renault Master full-size commercial cargo or passenger van with huge vertical headlights, wide grille and Renault diamond",
+            "front angle of a large Renault Master commercial panel van or minibus on a Brazilian road",
+            "rear view of a large tall Renault Master full-size van showing tall vertical rear cargo doors, high roof and tall vertical taillights",
+            "rear angle of a full-size Renault Master cargo van or executive passenger minibus showing long boxy body",
+            "a photo of a large Renault Master commercial delivery van or passenger van in Brazil",
+        ],
+    },
+    "Mercedes-Benz Sprinter": {
+        "categoria": "Furgão / Van",
+        "prompts": [
+            "front three-quarters view of a large tall Mercedes-Benz Sprinter commercial van or passenger minibus with prominent Mercedes three-pointed star grille and tall hood",
+            "front angle of a white Mercedes-Benz Sprinter full-size cargo van or executive passenger van on a Brazilian road",
+            "rear view of a large tall Mercedes-Benz Sprinter van showing tall vertical twin rear doors, high roof and vertical corner taillights",
+            "rear angle of a full-size Mercedes-Benz Sprinter panel van or minibus showing long boxy high-roof silhouette",
+            "a photo of a large Mercedes-Benz Sprinter commercial cargo or passenger van in Brazil",
+        ],
+    },
+    "Fiat Ducato": {
+        "categoria": "Furgão / Van",
+        "prompts": [
+            "front three-quarters view of a large tall Fiat Ducato full-size commercial cargo van or minibus with short snub nose, high-mounted swept headlights and wide grille",
+            "front angle of a white Fiat Ducato commercial panel van or passenger van on a Brazilian road",
+            "rear view of a large tall Fiat Ducato full-size van showing tall flat vertical twin rear doors and vertical corner taillights",
+            "rear angle of a full-size Fiat Ducato cargo van or executive minibus showing massive boxy high-roof body",
+            "a photo of a large Fiat Ducato commercial delivery or passenger van in Brazil",
+        ],
+    },
+    "Citroën Jumper": {
+        "categoria": "Furgão / Van",
+        "prompts": [
+            "front three-quarters view of a large tall Citroen Jumper full-size commercial cargo van or minibus with double chevron front grille and high-mounted headlights",
+            "front angle of a white Citroen Jumper commercial panel van or passenger van on a Brazilian road",
+            "rear view of a large tall Citroen Jumper full-size van showing tall vertical twin rear doors and vertical corner taillights",
+            "rear angle of a full-size Citroen Jumper cargo van showing long boxy high-roof silhouette",
+            "a photo of a large Citroen Jumper commercial utility van in Brazil",
+        ],
+    },
+    "Peugeot Boxer": {
+        "categoria": "Furgão / Van",
+        "prompts": [
+            "front three-quarters view of a large tall Peugeot Boxer full-size commercial cargo van or minibus with Peugeot lion emblem on wide front grille and high headlights",
+            "front angle of a white Peugeot Boxer commercial panel van or passenger van on a Brazilian road",
+            "rear view of a large tall Peugeot Boxer full-size van showing tall vertical twin rear doors and vertical corner taillights",
+            "rear angle of a full-size Peugeot Boxer cargo van showing long boxy high-roof utility body",
+            "a photo of a large Peugeot Boxer commercial utility van in Brazil",
+        ],
+    },
 }
 
 # Prompts Zero-Shot para categorias de carroceria (usados para validação cruzada ou fallback)
@@ -774,6 +1740,11 @@ PROMPTS_CATEGORIAS = {
         "a three-box sedan passenger car with an elongated rear trunk lid",
         "rear view of a classic four-door sedan car with a separate trunk",
         "front view of a four-door sedan car with front hood and grille",
+    ],
+    "Perua / Station Wagon": [
+        "a station wagon estate car with elongated roof and rear cargo window",
+        "rear view of a station wagon family estate car",
+        "front view of a station wagon passenger car",
     ],
     "SUV / Utilitário": [
         "a sport utility vehicle SUV crossover with high ground clearance and large wheels",
@@ -796,23 +1767,49 @@ PROMPTS_CATEGORIAS = {
 }
 
 # Mapeamento auxiliar por substring (caso use modelo YOLO supervisionado)
-MAPA_MODELOS_CATEGORIA = {
-    k.split("(")[0].strip().lower().split()[-1]: v["categoria"]
-    for k, v in CATALOGO_FROTA_BR.items()
+_TOKENS_AMBIGUOS = {
+    "plus", "mini", "cross", "novo", "antigo", "rocam", "grand", "sport6",
+    "5x", "h6", "7", "8", "500", "206", "207", "307", "308", "408", "2008", "3008",
 }
+MAPA_MODELOS_CATEGORIA = {}
+for _nome, _info in CATALOGO_FROTA_BR.items():
+    _base = _nome.split("(")[0].strip().lower()
+    _partes = _base.split()
+    _cat = _info["categoria"]
+    # Nome completo do catálogo (ex: "chevrolet astra", "fiat palio weekend")
+    MAPA_MODELOS_CATEGORIA[_base] = _cat
+    # Nome do modelo sem a montadora (ex: "palio weekend", "song plus", "tiggo 8", "c4 lounge")
+    if len(_partes) >= 2:
+        _sem_marca = " ".join(_partes[1:])
+        if len(_sem_marca) >= 2 and not _sem_marca.isdigit():
+            MAPA_MODELOS_CATEGORIA[_sem_marca] = _cat
+    # Última palavra apenas se não for curta ou numérica/ambígua
+    _ultimo = _partes[-1]
+    if len(_ultimo) >= 3 and not _ultimo.isdigit() and _ultimo not in _TOKENS_AMBIGUOS:
+        MAPA_MODELOS_CATEGORIA[_ultimo] = _cat
+
 MAPA_MODELOS_CATEGORIA.update({
     "fox": "Hatchback", "gol": "Hatchback", "palio": "Hatchback", "uno": "Hatchback",
     "uno mille": "Hatchback", "fiesta": "Hatchback", "fiesta rocam": "Hatchback",
-    "new fiesta": "Hatchback", "ka": "Hatchback",
+    "new fiesta": "Hatchback", "ka": "Hatchback", "up": "Hatchback", "qq": "Hatchback",
     "onix": "Hatchback", "hb20": "Hatchback", "polo": "Hatchback", "celta": "Hatchback",
+    "astra": "Hatchback", "march": "Hatchback", "fiat 500": "Hatchback",
+    "c4": "Hatchback", "c3": "Hatchback",
     "corolla": "Sedan", "civic": "Sedan", "voyage": "Sedan", "siena": "Sedan",
     "grand siena": "Sedan", "prisma": "Sedan", "virtus": "Sedan", "hb20s": "Sedan",
-    "onix plus": "Sedan",
+    "onix plus": "Sedan", "c4 lounge": "Sedan", "c4 pallas": "Sedan",
+    "palio weekend": "Perua / Station Wagon", "parati": "Perua / Station Wagon",
+    "spacefox": "Perua / Station Wagon", "fielder": "Perua / Station Wagon",
     "compass": "SUV / Utilitário", "renegade": "SUV / Utilitário", "creta": "SUV / Utilitário",
     "t-cross": "SUV / Utilitário", "tracker": "SUV / Utilitário", "kicks": "SUV / Utilitário",
-    "corolla cross": "SUV / Utilitário",
+    "corolla cross": "SUV / Utilitário", "c3 aircross": "SUV / Utilitário",
+    "c4 cactus": "SUV / Utilitário", "song plus": "SUV / Utilitário",
+    "yuan plus": "SUV / Utilitário", "haval h6": "SUV / Utilitário",
+    "tiggo 5x": "SUV / Utilitário", "tiggo 7": "SUV / Utilitário", "tiggo 8": "SUV / Utilitário",
     "strada": "Picape", "toro": "Picape", "saveiro": "Picape", "hilux": "Picape", "s10": "Picape",
-    "spin": "Minivan", "fiorino": "Furgão / Van",
+    "l200 triton": "Picape", "l200": "Picape",
+    "spin": "Minivan", "meriva": "Minivan", "zafira": "Minivan", "idea": "Minivan", "livina": "Minivan",
+    "fiorino": "Furgão / Van", "kombi": "Furgão / Van", "doblo": "Furgão / Van",
 })
 
 

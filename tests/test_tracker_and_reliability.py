@@ -148,6 +148,16 @@ def test_calcular_matriz_confiabilidade(prob_1, prob_2, esperado):
         ("Chevrolet Prisma", "Sedan"),
         ("Ford Ka (Antigo)", "Hatchback"),
         ("Ford Ka", "Hatchback"),
+        # Novos modelos e categorias do catálogo expandido
+        ("Chevrolet Astra", "Hatchback"),
+        ("Fiat Palio Weekend", "Perua / Station Wagon"),
+        ("Volkswagen Kombi", "Furgão / Van"),
+        ("Nissan March", "Hatchback"),
+        ("BYD Song Plus", "SUV / Utilitário"),
+        ("Peugeot 208", "Hatchback"),
+        ("Chery Tiggo 8", "SUV / Utilitário"),
+        ("Citroën C4 Lounge", "Sedan"),
+        ("Citroën C4", "Hatchback"),
     ],
 )
 def test_inferir_categoria_por_modelo(modelo, esperado):
