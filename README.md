@@ -278,7 +278,7 @@ O terminal exibirá em tempo real:
 
 ## ⚙️ Parâmetros de Configuração (`config.py`)
 
-Todos os parâmetros ajustáveis estão centralizados em [`config.py`](file:///e:/alpr_project/config.py):
+Todos os parâmetros ajustáveis estão centralizados em [`config.py`](config.py):
 
 | Parâmetro | Padrão | Descrição e Recomendações |
 | :--- | :---: | :--- |
@@ -341,6 +341,38 @@ python avaliar_alpr.py data/placas_detectadas.xlsx --saida resultados.md
 
 > [!NOTE]
 > Por rigor estatístico de QA, os percentuais só são exibidos quando o grupo possui **`n >= 15`** amostras válidas; abaixo disso o relatório exibe `amostra pequena (n < 15)`.
+
+---
+
+## 📊 Como Testei e Resultados Iniciais (QA)
+
+### Metodologia de Validação
+- **Testes unitários e de regressão (`pytest`):** **168 casos** automatizados validando gramática Mercosul/antiga, desempates ópticos, associação IoU, matriz de confiabilidade VMMR, estimativa de cor HSV, painel `conferir.py` e script `avaliar_alpr.py` (executados automaticamente via **GitHub Actions** a cada push na `main`).
+- **Conjunto de teste real (36 veículos):** sequência contínua extraída de 2 gravações 4K reais (`L_20260722160733_109.mp4` diurno e `N_20260914205129_043_0010.mp4` noturno), sem seleção prévia de casos fáceis, conferida manualmente no `conferir.py` com gabarito persistido localmente.
+- **Limitação declarada:** a amostra inicial possui **36 veículos** (`dia_frontal = 16`, `dia_traseira = 10`, `lateral = 8`, `noite_traseira = 2`, `moto = 0`). Por isso, percentuais por condição só são reportados onde `n >= 15`; as demais condições aguardam novos vídeos para atingir amostra mínima (meta: ~100 veículos).
+
+### Resultados Medidos (`Total Geral`, n = 36)
+
+| Métrica | Antes da calibração | Após calibração (Cor + 169 modelos) | Observações |
+| :--- | :---: | :---: | :--- |
+| **Placa exata** | `18/22 (81.8%)` | **`18/22 (81.8%)`** | Desconta 7 `SEM_PLACA` e 7 `Ilegível ($$$$$$$)`. Zero regressão. |
+| **Placa ($\le 1$ erro)** | `20/22 (90.9%)` | **`20/22 (90.9%)`** | Quase todos os erros de OCR são de apenas 1 caractere. |
+| **Cor correta** | `7/20 (35.0%)` | **`12/20 (60.0%)`** | Ganho de **+25 p.p.** no pipeline completo (`70.0%` nos recortes estáticos). |
+| **Modelo Top 1** | `15/35 (42.9%)` | `12/35 (34.3%)` | Queda explicada abaixo (competição no `softmax` + nomes por geração). |
+| **Modelo Top 3** | `21/35 (60.0%)` | `17/35 (48.6%)` | Em Confiabilidade **`Alta`** (`n = 19`): **52.6%** Top 1 e **57.9%** Top 3. |
+
+### Falhas Reais Encontradas, Diagnóstico e Ações
+1. **Confusão Mercosul (`0` vs `D` e `L` vs `Z`) + borda no crop do OCR:**
+   - *Falha:* a placa `ELU9D76` era lida como `EZU9076` (aceita como placa antiga) e a margem de 8% no recorte incluía borda escura do para-choque, degradando `'L'`.
+   - *Correção:* prioridade posicional Mercosul no `src/validator.py` (`'0' -> 'D'` na 5ª posição), desempate óptico `'L' > 'Z'` e margem `0%` no `FastPlateOCR`.
+2. **Carros estacionados lado a lado misturando caixas:**
+   - *Falha:* placa do veículo em primeiro plano (`ELU9D76`) era associada à bounding box de um `Renault Duster` logo atrás.
+   - *Correção:* função de custo ponderada por distância ao centro e proporção de área em `src/vehicle_tracker.py` + quebra de trilha em transição de placa.
+3. **Falsos `"Azul"` na estimativa de cor diurna (`35.0%` $\rightarrow$ `60.0%`):**
+   - *Falha:* em sombra aberta sob céu azul, o reflexo frio elevava `S` acima de `65` em carros pretos/pratas/brancos de `V` baixo, classificando-os como `"Azul"`.
+   - *Correção:* ROI rebaixada para evitar para-brisa (`y: 0.42..0.78`), estatística com mediana/percentil 75, matiz circular e critério conjunto de `Chroma` real.
+4. **Regressão medida ao expandir o catálogo Zero-Shot (73 $\rightarrow$ 169 modelos):**
+   - *Achado:* adicionar muitos modelos menos frequentes de uma vez (ex.: `Chery QQ`, `Renault Fluence`) aumentou a competição no `softmax` do SigLIP (derrubando o Top 3 de `60.0%` para `48.6%`), além de divergência nominal com o gabarito antes da separação por geração (`Ford Fiesta` vs `Ford Fiesta Rocam`). Documentado como limite conhecido para poda/calibração na próxima iteração.
 
 ---
 
