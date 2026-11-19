@@ -90,7 +90,7 @@ flowchart TD
 
     subgraph OCR_Val [" 🔤 Pipeline de Leitura e Validação "]
         CROP_P --> CLAHE["Equalização CLAHE & Redimensionamento"]
-        CLAHE --> OCR["FastPlateOCR (ONNX) / EasyOCR"]
+        CLAHE --> OCR["FastPlateOCR (ONNX Principal) / EasyOCR & PaddleOCR (Fallbacks)"]
         OCR --> VAL["Validador Sintático (Matriz 0/O, 8/B)"]
         VAL --> MASK["Formatação (Mercosul, Antiga ou Máscara '?')"]
     end
@@ -135,7 +135,7 @@ alpr_project/
 │   └── car_yolov8_cls.pt      # (Opcional) Classificador único VMMR (~3 MB)
 ├── src/                       # Módulos do pipeline
 │   ├── plate_detector.py      # Módulo YOLOv8 para detecção de placas e veículos
-│   ├── ocr_reader.py          # Leitor OCR (FastPlateOCR, EasyOCR, PaddleOCR)
+│   ├── ocr_reader.py          # Leitor OCR (FastPlateOCR principal; EasyOCR e PaddleOCR como fallbacks)
 │   ├── validator.py           # Gramática veicular, matriz de confusão e máscara '?'
 │   ├── vehicle_classifier.py  # Análise de cor HSV e classificação de carroceria / VMMR SigLIP
 │   ├── vehicle_tracker.py     # Rastreador IoU temporal para Varredura Total Forense
@@ -288,7 +288,7 @@ Todos os parâmetros ajustáveis estão centralizados em [`config.py`](file:///e
 | `FRAME_SKIP` | `1` | Intervalo de amostragem de frames. Use `1` para examinar 100% dos quadros e obter o frame mais nítido, ou aumente para `3`-`5` em CPUs modestas. |
 | `RESIZE_WIDTH` | `1280` | Largura da imagem durante a inferência YOLO (o recorte do OCR sempre usa a resolução 4K nativa). |
 | `USE_GPU` | `True` | Ativa CUDA caso haja hardware disponível (cai suavemente para CPU se indisponível). |
-| `OCR_ENGINE` | `"fast_plate_ocr"` | Motor de leitura: `"fast_plate_ocr"` (rápido, baseado em ONNX), `"easyocr"` ou `"paddleocr"`. |
+| `OCR_ENGINE` | `"fast_plate_ocr"` | Motor principal: `"fast_plate_ocr"` (ONNX). Fallbacks disponíveis: `"easyocr"` ou `"paddleocr"`. |
 | `OCR_MIN_CONFIDENCE` | `0.10` | Confiança mínima aceita do OCR. |
 | `DEDUP_WINDOW_SECONDS`| `60` | Janela de tempo (em segundos) para agrupar leituras do mesmo veículo em um único evento. |
 | `CAR_CLASSIFIER_ENABLED`| `True` | Habilita a Fase 2 (inferência de cor HSV, tipo e categoria de carroceria). |
@@ -314,6 +314,33 @@ As imagens salvas preservam a resolução máxima capturada pela câmera com sob
 * 🟦 **Retângulo Ciano**: Enquadramento do corpo do veículo com etiqueta indicando Tipo, Cor e Carroceria.
 * 🟩 **Retângulo Verde**: Enquadramento exato da placa com etiqueta exibindo a placa identificada e formatada.
 * 🏷️ **Nomenclatura Padronizada**: `PLACA_AAAA-MM-DD_HH-MM-SS.jpg` (com caracteres especiais sanitizados para compatibilidade com qualquer sistema de arquivos).
+
+---
+
+## 🧪 Testes Automatizados e Avaliação (QA)
+
+### 1. Executar a Suíte de Testes Unitários (`pytest`)
+Os testes validam a gramática de placas brasileiras, desempate óptico, lógica pura do rastreador IoU, matriz de confiabilidade VMMR e o script de avaliação quantitativa (sem carregar pesos de YOLO ou SigLIP):
+
+```bash
+venv\Scripts\python.exe -m pytest -v
+```
+
+### 2. Conferência Rápida (`conferir.py`) e Avaliação Quantitativa (`avaliar_alpr.py`)
+Para medir a acurácia real em vídeos gravados:
+1. Inicie o painel web local de conferência rápida para preencher o gabarito (`Placa real`, `Modelo real` e `Condição`) diretamente sobre as fotos detectadas (com zoom e botões de 1 clique):
+   ```bash
+   python conferir.py
+   ```
+   *(Opcionalmente, as colunas `Placa real`, `Modelo real` e `Condição` também podem ser editadas manualmente na aba `Placas` de `data/placas_detectadas.xlsx`.)*
+2. Execute o script de avaliação (ou clique em **Gerar Relatório QA** no próprio painel) para gerar as tabelas em Markdown por `Condição` e calibração por `Confiabilidade VMMR`:
+
+```bash
+python avaliar_alpr.py data/placas_detectadas.xlsx --saida resultados.md
+```
+
+> [!NOTE]
+> Por rigor estatístico de QA, os percentuais só são exibidos quando o grupo possui **`n >= 15`** amostras válidas; abaixo disso o relatório exibe `amostra pequena (n < 15)`.
 
 ---
 

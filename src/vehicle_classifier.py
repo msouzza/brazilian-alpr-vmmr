@@ -130,14 +130,24 @@ CATALOGO_FROTA_BR = {
             "a photo of a Fiat Palio compact two-box hatchback car in Brazil",
         ],
     },
-    "Fiat Uno": {
+    "Fiat Uno Mille": {
         "categoria": "Hatchback",
         "prompts": [
-            "front three-quarters view of a Fiat Uno Vivace compact hatchback showing rounded-square front grille slots and large headlights",
-            "front angle of a boxy Fiat Uno economy hatchback car on a Brazilian street",
-            "rear view of a Fiat Uno compact hatchback car with tall vertical taillights flanking the flat tailgate",
-            "rear angle of a Fiat Uno hatchback showing boxy silhouette and short rear bumper",
-            "a photo of a Fiat Uno compact two-box hatchback car on a Brazilian road",
+            "front three-quarters view of a classic boxy 1980s-2013 Fiat Uno Mille hatchback car with sharp straight angular lines, flat hood, rectangular headlights and narrow grille",
+            "front angle of an old boxy Fiat Uno Mille caixote economy hatchback car on a Brazilian street",
+            "rear view of a classic boxy Fiat Uno Mille hatchback with straight flat vertical rear glass, flat tailgate and small low rectangular taillights",
+            "rear angle of a classic square Fiat Uno Mille economy hatchback showing sharp boxy edges and thin rear bumper",
+            "a photo of a classic boxy Fiat Uno Mille two-box economy hatchback car in Brazil",
+        ],
+    },
+    "Fiat Uno (Novo)": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a 2010+ Fiat Novo Uno Vivace Way Attractive compact hatchback showing rounded front fascia with three distinctive rounded-square slots on the grille and large headlights",
+            "front angle of a modern rounded-square Fiat Novo Uno hatchback showing three characteristic small square front grille cutouts and tall roofline",
+            "rear view of a 2010+ Fiat Novo Uno compact hatchback car with tall vertical taillights mounted high along the C-pillars",
+            "rear angle of a Fiat Novo Uno Vivace Way hatchback showing rounded-boxy silhouette, tall C-pillar taillights and compact tailgate",
+            "a photo of a 2010+ Fiat Novo Uno Vivace Way compact two-box hatchback car on a Brazilian road",
         ],
     },
     "Fiat Argo": {
@@ -180,24 +190,44 @@ CATALOGO_FROTA_BR = {
             "a photo of a Hyundai HB20 subcompact two-box hatchback car on a Brazilian road",
         ],
     },
+    "Ford Ka (Antigo)": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a classic Brazilian two-door Ford Ka G1 G2 subcompact hatchback car with tiny rounded body, oval or angular headlights and Ford blue oval",
+            "front angle of an older two-door Ford Ka G1 G2 micro hatchback car on a Brazilian street",
+            "rear view of a classic two-door Ford Ka G1 G2 subcompact car with very short rounded rear end or large vertical pillar taillights",
+            "rear angle of an old two-door Ford Ka G1 G2 micro city hatchback showing curved compact tailgate and black or body-colored bumper",
+            "a photo of an older two-door Brazilian Ford Ka G1 G2 subcompact hatchback car on a street",
+        ],
+    },
     "Ford Ka": {
         "categoria": "Hatchback",
         "prompts": [
-            "front three-quarters view of a Ford Ka compact hatchback car showing trapezoidal honeycomb grille, swept headlights and Ford blue oval",
-            "front angle of a modern Ford Ka hatchback showing rounded hood and lower front bumper air intake",
-            "rear view of a Ford Ka compact hatchback car with triangular wraparound corner taillights",
-            "rear angle of a Ford Ka hatchback showing clean tailgate with centered Ford emblem",
-            "a photo of a Ford Ka subcompact two-box hatchback passenger car on a Brazilian road",
+            "front three-quarters view of a 2014+ Ford Ka G3 four-door compact hatchback car showing large Aston Martin style hexagonal grille, swept headlights and Ford blue oval",
+            "front angle of a modern four-door Ford Ka G3 hatchback showing sculpted hood and prominent hexagonal front grille",
+            "rear view of a modern four-door Ford Ka G3 compact hatchback car with triangular wraparound corner taillights",
+            "rear angle of a 2014+ Ford Ka G3 four-door hatchback showing clean modern tailgate with centered Ford emblem",
+            "a photo of a 2014+ Ford Ka G3 four-door compact two-box hatchback passenger car on a Brazilian road",
         ],
     },
-    "Ford Fiesta": {
+    "Ford Fiesta Rocam": {
         "categoria": "Hatchback",
         "prompts": [
-            "front three-quarters view of a Ford Fiesta compact hatchback car showing prominent trapezoidal chrome grille, sharp headlights and Ford badge",
-            "front angle of a Ford Fiesta hatchback showing sculpted hood lines and aerodynamic front bumper",
-            "rear view of a Ford Fiesta compact hatchback car with vertical pillar taillights or horizontal wraparound rear lamps",
-            "rear angle of a sporty Ford Fiesta hatchback showing rear roof spoiler and curved tailgate",
-            "a photo of a Ford Fiesta compact five-door hatchback car on a Brazilian road",
+            "front three-quarters view of a 2003-2014 Brazilian Ford Fiesta Rocam Mk5 Mk6 hatchback car with large rounded triangular headlights, small narrow front grille and Ford oval badge",
+            "front angle of a Brazilian Ford Fiesta Rocam hatchback car showing compact rounded hood and simple lower bumper",
+            "rear view of a 2003-2014 Ford Fiesta Rocam compact hatchback with tall upright rear end and vertical taillights mounted high on the C-pillars",
+            "rear angle of a Brazilian Ford Fiesta Rocam hatchback showing tall C-pillar vertical rear lamps and upright tailgate",
+            "a photo of a 2003-2014 Brazilian Ford Fiesta Rocam five-door compact hatchback car on a street",
+        ],
+    },
+    "Ford New Fiesta": {
+        "categoria": "Hatchback",
+        "prompts": [
+            "front three-quarters view of a 2011-2019 Ford New Fiesta global hatchback car with large Aston Martin style trapezoidal front grille, sharp swept-back slim headlights and Ford badge",
+            "front angle of a sporty Ford New Fiesta hatchback showing sculpted hood creases and aggressive trapezoidal grille",
+            "rear view of a Ford New Fiesta hatchback car with wide horizontal split wraparound taillights and sculpted tailgate",
+            "rear angle of a 2011-2019 Ford New Fiesta global hatchback showing rear roof spoiler, sloping roofline and horizontal taillights",
+            "a photo of a modern 2011-2019 Ford New Fiesta global five-door hatchback car on a Brazilian road",
         ],
     },
     "Renault Kwid": {
@@ -320,6 +350,26 @@ CATALOGO_FROTA_BR = {
             "a photo of a Chevrolet Onix Plus subcompact three-box sedan passenger car on a Brazilian road",
         ],
     },
+    "Chevrolet Prisma (G1)": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a 2006-2012 first generation Chevrolet Prisma G1 compact sedan derived from Celta with straight simple front fascia, triangular headlights and gold bowtie",
+            "front angle of a 2006-2012 Chevrolet Prisma G1 economy sedan showing Celta-style hood and simple front grille",
+            "rear view of a first generation Chevrolet Prisma G1 four-door sedan with short elevated high rear trunk and triangular corner taillights",
+            "rear angle of a 2006-2012 Chevrolet Prisma G1 three-box economy sedan showing tall short boot lid and gold Chevrolet emblem",
+            "a photo of a 2006-2012 first generation Chevrolet Prisma G1 compact four-door sedan car in Brazil",
+        ],
+    },
+    "Chevrolet Prisma (G2)": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a 2013-2019 second generation Chevrolet Prisma G2 Joy Plus sedan derived from Onix with Chevrolet dual-port grille, large headlights and gold bowtie",
+            "front angle of a Chevrolet Prisma G2 Joy Plus four-door sedan showing rounded sculpted hood and dual-port front fascia",
+            "rear view of a 2013-2019 Chevrolet Prisma G2 sedan car with fluid elongated separate rear trunk and horizontal wraparound taillights",
+            "rear angle of a Chevrolet Prisma G2 Joy Plus three-box sedan showing smooth aerodynamic trunk lid, high C-pillar and Chevrolet emblem",
+            "a photo of a 2013-2019 Chevrolet Prisma G2 Joy Plus four-door compact three-box sedan car on a Brazilian road",
+        ],
+    },
     "Chevrolet Cruze": {
         "categoria": "Sedan",
         "prompts": [
@@ -370,14 +420,34 @@ CATALOGO_FROTA_BR = {
             "a photo of a Volkswagen Jetta four-door executive three-box sedan car on a Brazilian highway",
         ],
     },
+    "Volkswagen Santana": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a classic Volkswagen Santana three-box sedan car showing rectangular headlights, horizontal front grille and VW emblem",
+            "front angle of a classic boxy Volkswagen Santana four-door sedan car on a Brazilian street",
+            "rear view of a classic Volkswagen Santana sedan car with flat boxy separate rear trunk and wide rectangular horizontal taillights",
+            "rear angle of a Volkswagen Santana four-door three-box sedan showing long flat trunk lid, squared roofline and chrome trim",
+            "a photo of a classic Volkswagen Santana four-door three-box passenger sedan car in Brazil",
+        ],
+    },
     "Fiat Siena": {
         "categoria": "Sedan",
         "prompts": [
-            "front three-quarters view of a Fiat Grand Siena compact sedan car showing chrome front grille, swept-back headlights and Fiat badge",
-            "front angle of a Fiat Siena four-door subcompact sedan car on a Brazilian street",
-            "rear view of a Fiat Grand Siena compact sedan car with tall separate rear trunk and high-mounted horizontal taillights",
-            "rear angle of a Fiat Siena three-box sedan showing elevated boot lid and centered Fiat emblem",
-            "a photo of a Fiat Siena four-door subcompact three-box sedan passenger car in Brazil",
+            "front three-quarters view of a classic Fiat Siena Fire EL compact sedan car based on Palio with narrow front fascia, rounded headlights and small Fiat grille",
+            "front angle of an older classic Fiat Siena four-door subcompact economy sedan on a Brazilian street",
+            "rear view of a classic Fiat Siena Fire EL sedan car with compact separate trunk and smaller rectangular horizontal taillights on the trunk lid",
+            "rear angle of a classic Fiat Siena three-box economy sedan showing flat narrow rear end and Fiat emblem",
+            "a photo of a classic Fiat Siena Fire EL four-door compact three-box sedan car in Brazil",
+        ],
+    },
+    "Fiat Grand Siena": {
+        "categoria": "Sedan",
+        "prompts": [
+            "front three-quarters view of a Fiat Grand Siena compact sedan car with larger taller body, wide front grille with horizontal chrome bar, swept-back headlights and Fiat badge",
+            "front angle of a Fiat Grand Siena four-door sedan showing tall wide hood, chrome grille trim and lower bumper fog lamps",
+            "rear view of a Fiat Grand Siena sedan car with large tall separate rear trunk and large wraparound taillights extending onto the trunk lid",
+            "rear angle of a Fiat Grand Siena three-box sedan showing taller muscular rear quarters, elevated boot lid and large wraparound rear lamps",
+            "a photo of a Fiat Grand Siena four-door compact three-box sedan passenger car on a Brazilian road",
         ],
     },
     "Fiat Cronos": {
@@ -727,14 +797,20 @@ PROMPTS_CATEGORIAS = {
 
 # Mapeamento auxiliar por substring (caso use modelo YOLO supervisionado)
 MAPA_MODELOS_CATEGORIA = {
-    k.lower().split()[-1]: v["categoria"] for k, v in CATALOGO_FROTA_BR.items()
+    k.split("(")[0].strip().lower().split()[-1]: v["categoria"]
+    for k, v in CATALOGO_FROTA_BR.items()
 }
 MAPA_MODELOS_CATEGORIA.update({
     "fox": "Hatchback", "gol": "Hatchback", "palio": "Hatchback", "uno": "Hatchback",
+    "uno mille": "Hatchback", "fiesta": "Hatchback", "fiesta rocam": "Hatchback",
+    "new fiesta": "Hatchback", "ka": "Hatchback",
     "onix": "Hatchback", "hb20": "Hatchback", "polo": "Hatchback", "celta": "Hatchback",
-    "corolla": "Sedan", "civic": "Sedan", "voyage": "Sedan", "siena": "Sedan", "virtus": "Sedan",
+    "corolla": "Sedan", "civic": "Sedan", "voyage": "Sedan", "siena": "Sedan",
+    "grand siena": "Sedan", "prisma": "Sedan", "virtus": "Sedan", "hb20s": "Sedan",
+    "onix plus": "Sedan",
     "compass": "SUV / Utilitário", "renegade": "SUV / Utilitário", "creta": "SUV / Utilitário",
     "t-cross": "SUV / Utilitário", "tracker": "SUV / Utilitário", "kicks": "SUV / Utilitário",
+    "corolla cross": "SUV / Utilitário",
     "strada": "Picape", "toro": "Picape", "saveiro": "Picape", "hilux": "Picape", "s10": "Picape",
     "spin": "Minivan", "fiorino": "Furgão / Van",
 })
@@ -744,8 +820,13 @@ def inferir_categoria_por_modelo(nome_modelo: str) -> str:
     """Inferir a carroceria/categoria a partir do nome ou modelo do veículo."""
     if nome_modelo in CATALOGO_FROTA_BR:
         return CATALOGO_FROTA_BR[nome_modelo]["categoria"]
-    nome_norm = nome_modelo.lower()
-    for chave, cat in MAPA_MODELOS_CATEGORIA.items():
+    nome_norm = nome_modelo.strip().lower()
+    for k, v in CATALOGO_FROTA_BR.items():
+        if k.lower() == nome_norm:
+            return v["categoria"]
+    for chave, cat in sorted(
+        MAPA_MODELOS_CATEGORIA.items(), key=lambda item: len(item[0]), reverse=True
+    ):
         if chave in nome_norm:
             return cat
     return "Carro"
@@ -791,6 +872,7 @@ def formatar_nome_veiculo(classe: str) -> str:
 def estimar_cor_lataria(crop_veiculo: np.ndarray) -> str:
     """
     Analisa a região representativa da lataria do veículo no espaço de cores HSV
+    (com correção de reflexo azulado por chroma e estatísticas robustas por mediana/percentil)
     e retorna a cor predominante em português.
     """
     if crop_veiculo is None or crop_veiculo.size == 0:
@@ -800,9 +882,10 @@ def estimar_cor_lataria(crop_veiculo: np.ndarray) -> str:
     if h < 20 or w < 20:
         return "Indefinida"
 
-    # Seleciona a faixa central da lataria (desconsidera teto/vidro e rodas/asfalto)
-    y1, y2 = int(h * 0.30), int(h * 0.75)
-    x1, x2 = int(w * 0.15), int(w * 0.85)
+    # Foca na faixa central/inferior da lataria (evita o terço superior com vidros/céu
+    # e o rodapé com pneus/asfalto).
+    y1, y2 = int(h * 0.42), int(h * 0.78)
+    x1, x2 = int(w * 0.18), int(w * 0.82)
     lataria = crop_veiculo[y1:y2, x1:x2]
 
     if lataria.size == 0:
@@ -813,34 +896,70 @@ def estimar_cor_lataria(crop_veiculo: np.ndarray) -> str:
     S = hsv[:, :, 1]
     V = hsv[:, :, 2]
 
-    # Filtra reflexos brancos extremos de farol (> 240) e sombras pretas puras (< 30)
-    mascara = (V > 30) & (V < 240)
+    # Filtra sombras extremas (V < 25) e brilhos estourados (V > 245)
+    mascara = (V >= 25) & (V <= 245)
     if np.sum(mascara) < 50:
         mascara = np.ones(V.shape, dtype=bool)
 
-    s_media = float(np.mean(S[mascara]))
-    v_media = float(np.mean(V[mascara]))
-    h_media = float(np.mean(H[mascara]))
+    h_vals = H[mascara]
+    s_vals = S[mascara]
+    v_vals = V[mascara]
 
-    # Cores acromáticas (baixa saturação: Branco, Preto, Prata / Cinza)
-    if s_media < 65:
-        if v_media < 65:
+    # Chroma absoluta (max(B,G,R) - min(B,G,R)): impede que reflexos frios/azulados
+    # em carros escuros, pratas ou brancos (onde V é baixo e S infla) virem "Azul".
+    lataria_m = lataria[mascara].astype(np.int16)
+    chroma_vals = lataria_m.max(axis=1) - lataria_m.min(axis=1)
+
+    s_med = float(np.median(s_vals))
+    s_p75 = float(np.percentile(s_vals, 75))
+    v_med = float(np.median(v_vals))
+    c_med = float(np.median(chroma_vals))
+
+    # Matiz circular mediano nos pixels mais saturados (evita wrap-around 0/179 no vermelho)
+    mask_sat_h = (s_vals >= 80) & (chroma_vals >= 20)
+    h_ref = h_vals[mask_sat_h] if np.sum(mask_sat_h) >= 20 else h_vals
+    angulos = h_ref.astype(np.float64) * (2.0 * np.pi / 180.0)
+    sin_med = float(np.median(np.sin(angulos)))
+    cos_med = float(np.median(np.cos(angulos)))
+    if abs(sin_med) < 1e-6 and abs(cos_med) < 1e-6:
+        h_med = float(np.median(h_ref))
+    else:
+        ang = float(np.arctan2(sin_med, cos_med))
+        if ang < 0:
+            ang += 2.0 * np.pi
+        h_med = ang * (180.0 / (2.0 * np.pi))
+
+    # Critério conjunto de cromaticidade: exige saturação + separação real de canais
+    # ou saturação alta consistente (ex.: azul/vermelho escuros reais).
+    eh_cromatico = (
+        (c_med >= 42 and s_med >= 85)
+        or (s_med >= 155 and c_med >= 22)
+        or (s_p75 >= 185 and s_med >= 100 and c_med >= 14)
+    )
+
+    # Cores acromáticas (Branco, Preto, Prata / Cinza)
+    if not eh_cromatico:
+        if v_med < 55:
             return "Preto"
-        elif v_media > 145:
+        elif v_med > 145:
             return "Branco"
         else:
             return "Prata / Cinza"
 
     # Cores cromáticas baseadas no Matiz (Hue no OpenCV vai de 0 a 179)
-    if h_media < 12 or h_media >= 165:
+    if h_med < 8 or h_med >= 165:
         return "Vermelho"
-    elif 12 <= h_media < 35:
+    elif 8 <= h_med < 26:
+        if v_med < 120:
+            return "Marrom"
         return "Amarelo / Laranja"
-    elif 35 <= h_media < 85:
+    elif 26 <= h_med < 35:
+        return "Amarelo / Laranja"
+    elif 35 <= h_med < 85:
         return "Verde"
-    elif 85 <= h_media < 135:
+    elif 85 <= h_med < 135:
         return "Azul"
-    elif 135 <= h_media < 165:
+    elif 135 <= h_med < 165:
         return "Roxo / Vinho"
 
     return "Outra"

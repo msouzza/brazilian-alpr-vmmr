@@ -51,11 +51,12 @@ data/videos_processados/*
 data/fotos/*
 !data/fotos/.gitkeep
 
-# Planilhas geradas e logs de execução
+# Planilhas geradas, logs de execução e backup do gabarito QA
 data/*.xlsx
 *.xlsx
 data/*.log
 *.log
+data/gabarito_qa.json
 
 # Treinamentos YOLO / Ultralytics e Datasets
 runs/
